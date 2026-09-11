@@ -468,11 +468,16 @@ p { margin: 0; text-wrap: pretty; }
   margin-bottom: 50px;
 }
 .filter-bar {
-  display: flex; gap: 8px; flex-wrap: wrap;
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
   background: rgba(255,255,255,0.06);
-  padding: 6px;
+  padding: 6px 10px;
   border-radius: 999px;
   border: 1px solid rgba(255,255,255,0.12);
+}
+.filter-group { display: flex; gap: 8px; flex-wrap: wrap; }
+.filter-group + .filter-group {
+  padding-left: 10px;
+  border-left: 1px solid rgba(255,255,255,0.18);
 }
 .filter-chip {
   padding: 9px 16px;
@@ -495,6 +500,25 @@ p { margin: 0; text-wrap: pretty; }
   margin-right: 4px;
   align-self: center;
   padding-left: 8px;
+}
+/* Narrow screens cannot hold both groups on one line. Stack them instead of
+   letting the chips wrap through each other, and drop the pill radius so the
+   taller box does not read as a blob. */
+@media (max-width: 720px) {
+  .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 14px;
+    border-radius: var(--radius-lg);
+  }
+  .filter-group + .filter-group {
+    padding-left: 0;
+    border-left: 0;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255,255,255,0.18);
+  }
+  .filter-group-label { padding-left: 0; align-self: flex-start; }
 }
 
 .trek-grid {
@@ -1430,18 +1454,21 @@ body.locked { overflow: hidden; }
       </div>
     </div>
 
-    <div class="filter-bar reveal" role="tablist" id="filterBar" style="margin-bottom:34px;">
-      <span class="filter-group-label">Filter</span>
-      <button class="filter-chip active" data-filter-type="difficulty" data-filter="all">All treks</button>
-      <button class="filter-chip" data-filter-type="difficulty" data-filter="easy">Easy</button>
-      <button class="filter-chip" data-filter-type="difficulty" data-filter="moderate">Moderate</button>
-      <button class="filter-chip" data-filter-type="difficulty" data-filter="challenging">Challenging</button>
-      <button class="filter-chip" data-filter-type="difficulty" data-filter="strenuous">Strenuous</button>
-      <span style="width:1px; background:rgba(255,255,255,0.18); margin: 4px 8px;"></span>
-      <button class="filter-chip active" data-filter-type="length" data-filter="all">Any length</button>
-      <button class="filter-chip" data-filter-type="length" data-filter="short">Short&nbsp;(≤5d)</button>
-      <button class="filter-chip" data-filter-type="length" data-filter="medium">Medium&nbsp;(6–10d)</button>
-      <button class="filter-chip" data-filter-type="length" data-filter="long">Long&nbsp;(11d+)</button>
+    <div class="filter-bar reveal" id="filterBar" style="margin-bottom:34px;">
+      <span class="filter-group-label" id="filterLabel">Filter</span>
+      <div class="filter-group" role="group" aria-label="Filter treks by difficulty">
+        <button class="filter-chip active" aria-pressed="true" data-filter-type="difficulty" data-filter="all">All treks</button>
+        <button class="filter-chip" aria-pressed="false" data-filter-type="difficulty" data-filter="easy">Easy</button>
+        <button class="filter-chip" aria-pressed="false" data-filter-type="difficulty" data-filter="moderate">Moderate</button>
+        <button class="filter-chip" aria-pressed="false" data-filter-type="difficulty" data-filter="challenging">Challenging</button>
+        <button class="filter-chip" aria-pressed="false" data-filter-type="difficulty" data-filter="strenuous">Strenuous</button>
+      </div>
+      <div class="filter-group" role="group" aria-label="Filter treks by length">
+        <button class="filter-chip active" aria-pressed="true" data-filter-type="length" data-filter="all">Any length</button>
+        <button class="filter-chip" aria-pressed="false" data-filter-type="length" data-filter="short">Short&nbsp;(≤5d)</button>
+        <button class="filter-chip" aria-pressed="false" data-filter-type="length" data-filter="medium">Medium&nbsp;(6–10d)</button>
+        <button class="filter-chip" aria-pressed="false" data-filter-type="length" data-filter="long">Long&nbsp;(11d+)</button>
+      </div>
     </div>
 
     <div class="trek-grid" id="trekGrid"><!-- cards injected by JS --></div>
@@ -2038,8 +2065,12 @@ let activeDiff = 'all', activeLen = 'all';
 document.querySelectorAll('.filter-chip').forEach(chip => {
   chip.addEventListener('click', () => {
     const type = chip.dataset.filterType;
-    document.querySelectorAll(`.filter-chip[data-filter-type="${type}"]`).forEach(c => c.classList.remove('active'));
+    document.querySelectorAll(`.filter-chip[data-filter-type="${type}"]`).forEach(c => {
+      c.classList.remove('active');
+      c.setAttribute('aria-pressed', 'false');
+    });
     chip.classList.add('active');
+    chip.setAttribute('aria-pressed', 'true');
     if (type === 'difficulty') activeDiff = chip.dataset.filter;
     else activeLen = chip.dataset.filter;
     applyFilters();
