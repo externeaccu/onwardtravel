@@ -24,10 +24,11 @@ from 10.3 MB to 2.6 MB. Full-resolution originals are held by the client.
 | `prayer-flags.jpeg` | trek card |
 | `trail-village.jpeg` | trek card |
 | `summit-pose.jpeg` | testimonials and about |
+| `sandip.jpg` | guide card portrait in the about section |
 
-The guide card in the about section still shows a drawn avatar placeholder
-rather than a photograph. To use a real portrait, add `images/sandip.jpg` and
-replace that placeholder markup with an `img` element.
+The portrait is square-cropped to 600 pixels around the face, because the
+guide card renders it in an 88 pixel circle. Re-crop from the original if the
+framing ever needs to change.
 
 ## Deploying
 

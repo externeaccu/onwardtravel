@@ -1294,15 +1294,11 @@ p { margin: 0; text-wrap: pretty; }
   position: relative;
   overflow: hidden;
 }
-.guide-avatar svg { width: 64px; height: 64px; }
-.guide-avatar-note {
-  position: absolute;
-  bottom: 6px; left: 0; right: 0;
-  text-align: center;
-  font-size: 9px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(255,253,249,0.7);
+.guide-avatar img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 /* ---------- Body lock ---------- */
@@ -1388,10 +1384,9 @@ body.locked { overflow: hidden; }
         <p>Since 2017 we've led travellers through the awe-inspiring landscapes of the Himalaya — from quiet rhododendron forests to the high passes above 5,000&nbsp;m. Every itinerary is shaped around the people who live along the trail, so each day is as much about the chai and the conversation as it is the view.</p>
         <p>We work with local Nepali guides from across the Himalayan regions. Hiring locally keeps your trip authentic and makes sure your money supports the communities that make these mountains feel like home.</p>
         <div class="guide-card">
-          <!-- REPLACE: Add a portrait photo of Sandip — file goes in images/sandip.jpg -->
-          <div class="guide-avatar" aria-hidden="true">
-            <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="24" r="11" fill="currentColor" opacity="0.4"/><path d="M10 58c2-12 12-18 22-18s20 6 22 18" fill="currentColor" opacity="0.4"/></svg>
-            <span class="guide-avatar-note">Photo of Sandip</span>
+          <div class="guide-avatar">
+            <img src="images/sandip.jpg" width="88" height="88" loading="lazy" decoding="async"
+                 alt="Sandip, founder and lead guide, on the trail in the Himalaya" />
           </div>
           <div>
             <div class="about-sig-name">Sandip</div>
