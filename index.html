@@ -1,0 +1,2311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Nepal trekking guide | Annapurna, Everest, Langtang, Manaslu treks | Local Nepali guides since 2017. Authentic, guide-led Himalayan adventures with Sandip and the Magic Beyond Himalaya team." />
+<meta name="theme-color" content="#1f3d3a" />
+<title>Magic Beyond Himalaya — Guided Treks in Nepal with Sandip</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ---------- Tokens ---------- */
+:root {
+  --green-900: #14302d;
+  --green-800: #1f3d3a;
+  --green-700: #2c524d;
+  --green-600: #3e6e68;
+  --amber-600: #b56f1a;
+  --amber-500: #c8842b;
+  --amber-400: #dba24a;
+  --cream-50:  #faf6ef;
+  --cream-100: #f3ece0;
+  --cream-200: #e8ddc8;
+  --ink-900:   #1a1714;
+  --ink-800:   #241f1c;
+  --ink-600:   #4d4742;
+  --ink-500:   #6b635c;
+  --ink-400:   #8a8278;
+  --line:      #d9cfbe;
+  --white:     #fffdf9;
+
+  --shadow-sm: 0 1px 2px rgba(20,48,45,0.06), 0 1px 3px rgba(20,48,45,0.05);
+  --shadow-md: 0 4px 12px rgba(20,48,45,0.08), 0 2px 4px rgba(20,48,45,0.06);
+  --shadow-lg: 0 18px 40px -12px rgba(20,48,45,0.22), 0 8px 16px -8px rgba(20,48,45,0.12);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 18px;
+
+  --container: 1180px;
+  --gutter: 22px;
+
+  --font-display: 'DM Serif Display', 'Georgia', serif;
+  --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* ---------- Reset ---------- */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--ink-800);
+  background: var(--cream-50);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+h1,h2,h3,h4 { font-family: var(--font-display); font-weight: 400; letter-spacing: -0.01em; line-height: 1.1; margin: 0; color: var(--ink-900); text-wrap: balance; }
+p { margin: 0; text-wrap: pretty; }
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--amber-600);
+}
+.eyebrow::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: var(--amber-500);
+}
+
+.section-title {
+  font-size: clamp(32px, 4.5vw, 52px);
+  margin-top: 14px;
+}
+
+.section-lede {
+  margin-top: 18px;
+  font-size: 18px;
+  color: var(--ink-600);
+  max-width: 620px;
+}
+
+/* ---------- Nav ---------- */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 18px 0;
+  transition: background 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
+}
+.nav.scrolled {
+  background: rgba(250,246,239,0.96);
+  backdrop-filter: blur(10px);
+  padding: 12px 0;
+  box-shadow: 0 1px 0 var(--line);
+}
+.nav-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.brand {
+  display: flex; align-items: center; gap: 12px;
+  color: var(--white);
+  transition: color 0.3s ease;
+}
+.nav.scrolled .brand { color: var(--ink-900); }
+.brand-mark {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: var(--amber-500);
+  display: grid; place-items: center;
+  flex-shrink: 0;
+}
+.brand-mark svg { width: 22px; height: 22px; }
+.brand-text {
+  display: flex; flex-direction: column; line-height: 1.05;
+}
+.brand-name {
+  font-family: var(--font-display);
+  font-size: 20px;
+}
+.brand-tag {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.nav-links {
+  display: flex; gap: 32px; align-items: center;
+  color: var(--white);
+  transition: color 0.3s ease;
+}
+.nav.scrolled .nav-links { color: var(--ink-800); }
+.nav-links a {
+  font-size: 14px; font-weight: 500;
+  transition: color 0.2s ease;
+}
+.nav-links a:hover { color: var(--amber-500); }
+.nav-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--amber-500);
+  color: var(--white) !important;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+.nav-cta:hover { background: var(--amber-600); color: var(--white) !important; }
+
+.nav-burger {
+  display: none;
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  align-items: center; justify-content: center;
+  color: inherit;
+}
+.nav-burger svg { width: 18px; height: 18px; }
+
+@media (max-width: 880px) {
+  .nav-links { display: none; }
+  .nav-burger { display: inline-flex; }
+  .nav-links.open {
+    display: flex; flex-direction: column;
+    position: absolute; top: 100%; left: 16px; right: 16px;
+    margin-top: 10px;
+    padding: 22px;
+    background: var(--cream-50);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    color: var(--ink-800);
+    gap: 18px;
+    align-items: stretch;
+  }
+  .nav-links.open .nav-cta { justify-content: center; }
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  color: var(--white);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 120px 0 70px;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background-image: url('images/manaslu-village.jpeg');
+  background-size: cover;
+  background-position: center 40%;
+  z-index: 0;
+}
+.hero-bg::after {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, rgba(20,48,45,0.45) 0%, rgba(20,48,45,0.15) 35%, rgba(20,48,45,0.65) 100%);
+}
+.hero-inner {
+  position: relative; z-index: 1;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: end;
+}
+.hero h1 {
+  font-size: clamp(42px, 7vw, 92px);
+  color: var(--white);
+  letter-spacing: -0.02em;
+  max-width: 14ch;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--amber-400);
+}
+.hero-tagline {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(18px, 2.2vw, 24px);
+  margin-top: 18px;
+  opacity: 0.92;
+}
+.hero-sub {
+  margin-top: 14px;
+  font-size: 17px;
+  max-width: 50ch;
+  opacity: 0.88;
+}
+.hero-ctas {
+  display: flex; gap: 14px; margin-top: 36px; flex-wrap: wrap;
+}
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 15px 26px;
+  border-radius: 999px;
+  font-size: 15px; font-weight: 600;
+  transition: transform 0.15s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  white-space: nowrap;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-primary { background: var(--amber-500); color: var(--white); }
+.btn-primary:hover { background: var(--amber-600); }
+.btn-ghost {
+  background: transparent;
+  color: var(--white);
+  border: 1.5px solid rgba(255,255,255,0.55);
+}
+.btn-ghost:hover { background: rgba(255,255,255,0.12); border-color: var(--white); }
+.btn-dark { background: var(--green-800); color: var(--white); }
+.btn-dark:hover { background: var(--green-900); }
+
+.hero-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: right;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+.hero-meta-num {
+  font-family: var(--font-display);
+  font-size: 44px;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1;
+  color: var(--amber-400);
+}
+@media (max-width: 720px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-meta { text-align: left; }
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 24px; left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+}
+.hero-scroll::after {
+  content: "";
+  width: 1px; height: 36px;
+  background: rgba(255,255,255,0.6);
+  animation: scrollPulse 2.2s infinite;
+}
+@keyframes scrollPulse {
+  0%,100% { transform: scaleY(0.4); opacity: 0.4; transform-origin: top; }
+  50%     { transform: scaleY(1);   opacity: 1; transform-origin: top; }
+}
+
+/* ---------- Sections ---------- */
+.section {
+  padding: 110px 0;
+  position: relative;
+}
+.section.tight { padding: 80px 0; }
+.section-dark {
+  background: var(--green-900);
+  color: var(--cream-100);
+}
+.section-dark h1, .section-dark h2, .section-dark h3, .section-dark h4 { color: var(--white); }
+.section-dark .eyebrow { color: var(--amber-400); }
+.section-dark .eyebrow::before { background: var(--amber-400); }
+.section-dark .section-lede { color: rgba(255,253,249,0.78); }
+
+.section-cream { background: var(--cream-100); }
+
+@media (max-width: 720px) {
+  .section { padding: 72px 0; }
+}
+
+/* ---------- About ---------- */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+.about-photo {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 4/5;
+  background: var(--green-800);
+}
+.about-photo img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+.about-photo-stamp {
+  position: absolute;
+  top: 22px; left: 22px;
+  background: var(--cream-50);
+  color: var(--green-800);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.about-photo-caption {
+  position: absolute;
+  bottom: 22px; left: 22px; right: 22px;
+  color: var(--white);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.3;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+}
+.about-text p {
+  font-size: 18px;
+  color: var(--ink-600);
+  margin-top: 22px;
+}
+.about-text p.lead {
+  font-size: 22px;
+  color: var(--ink-800);
+  font-family: var(--font-display);
+  line-height: 1.35;
+  margin-top: 28px;
+}
+.about-sig {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.about-sig-name {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-style: italic;
+}
+.about-sig-role {
+  font-size: 13px;
+  color: var(--ink-500);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.stats {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 36px 0;
+}
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 42px;
+  color: var(--green-800);
+  line-height: 1;
+}
+.stat-label {
+  font-size: 13px;
+  color: var(--ink-500);
+  margin-top: 8px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 880px) {
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-photo { max-width: 480px; }
+  .stats { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+}
+
+/* ---------- Treks ---------- */
+.treks-head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 30px;
+  align-items: end;
+  margin-bottom: 50px;
+}
+.filter-bar {
+  display: flex; gap: 8px; flex-wrap: wrap;
+  background: rgba(255,255,255,0.06);
+  padding: 6px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.filter-chip {
+  padding: 9px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,253,249,0.78);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.filter-chip:hover { color: var(--white); }
+.filter-chip.active {
+  background: var(--amber-500);
+  color: var(--white);
+}
+.filter-group-label {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,253,249,0.55);
+  margin-right: 4px;
+  align-self: center;
+  padding-left: 8px;
+}
+
+.trek-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+@media (max-width: 980px) { .trek-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .trek-grid { grid-template-columns: 1fr; } }
+
+.trek-card {
+  background: var(--cream-50);
+  color: var(--ink-800);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex; flex-direction: column;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+.trek-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+.trek-card.is-hidden {
+  display: none;
+}
+.trek-card-media {
+  position: relative;
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+  background: var(--green-800);
+}
+.trek-card-media img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.trek-card:hover .trek-card-media img { transform: scale(1.04); }
+
+.diff-badge {
+  position: absolute;
+  top: 14px; left: 14px;
+  background: var(--cream-50);
+  color: var(--ink-800);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.diff-badge[data-d="easy"] { background: #dfe9c6; color: #4b5d22; }
+.diff-badge[data-d="moderate"] { background: #f6e2b6; color: #6e4a14; }
+.diff-badge[data-d="challenging"] { background: #f3c89b; color: #6f3a13; }
+.diff-badge[data-d="strenuous"] { background: #e8a48b; color: #5d2412; }
+
+.trek-card-body {
+  padding: 24px 24px 26px;
+  display: flex; flex-direction: column; gap: 14px;
+  flex: 1;
+}
+.trek-card h3 {
+  font-size: 24px;
+  line-height: 1.15;
+}
+.trek-meta {
+  display: flex; gap: 14px; flex-wrap: wrap;
+  color: var(--ink-500);
+  font-size: 13px;
+}
+.trek-meta span { display: inline-flex; align-items: center; gap: 6px; }
+.trek-meta svg { width: 14px; height: 14px; opacity: 0.7; }
+.trek-card-foot {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px dashed var(--line);
+}
+.trek-price small {
+  display: block; font-size: 11px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--ink-500);
+  margin-bottom: 2px;
+}
+.trek-price b {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--green-800);
+}
+.trek-card-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 13px; font-weight: 600;
+  color: var(--amber-600);
+}
+.trek-card-link svg { width: 14px; height: 14px; transition: transform 0.2s ease; }
+.trek-card:hover .trek-card-link svg { transform: translateX(3px); }
+
+/* ---------- Modal ---------- */
+.modal-backdrop {
+  position: fixed; inset: 0;
+  background: var(--cream-50);
+  z-index: 200;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  overflow-y: auto;
+  padding: 0;
+}
+.modal-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal {
+  background: var(--cream-50);
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  transform: translateY(12px);
+  transition: transform 0.3s ease;
+}
+.modal-backdrop.open .modal { transform: translateY(0); }
+.modal-close {
+  position: fixed; top: 22px; right: 22px;
+  z-index: 5;
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  background: rgba(255,253,249,0.96);
+  display: grid; place-items: center;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(0,0,0,0.06);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.modal-close:hover { transform: scale(1.06); }
+.modal-close svg { width: 18px; height: 18px; }
+.modal-back {
+  position: fixed; top: 22px; left: 22px;
+  z-index: 5;
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 16px 10px 12px;
+  border-radius: 999px;
+  background: rgba(255,253,249,0.96);
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(0,0,0,0.06);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-700);
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: transform 0.2s ease;
+}
+.modal-back:hover { transform: translateX(-2px); }
+.modal-back svg { width: 14px; height: 14px; }
+.modal-hero {
+  position: relative;
+  height: clamp(380px, 62vh, 620px);
+  overflow: hidden;
+  background: var(--green-800);
+}
+.modal-hero img { width: 100%; height: 100%; object-fit: cover; }
+.modal-hero::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0) 35%, rgba(0,0,0,0.78) 100%);
+}
+.modal-hero-text {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 0 max(48px, 7vw) 56px;
+  color: var(--white);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.modal-hero-eyebrow {
+  display: inline-block;
+  font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+  background: rgba(255,253,249,0.16);
+  border: 1px solid rgba(255,253,249,0.3);
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+  backdrop-filter: blur(8px);
+}
+.modal-hero-text h2 {
+  color: var(--white);
+  font-size: clamp(36px, 5.6vw, 68px);
+  line-height: 1.05;
+  margin-bottom: 18px;
+  max-width: 16ch;
+}
+.modal-hero-meta {
+  display: flex; gap: 28px; flex-wrap: wrap;
+  font-size: 14px;
+  opacity: 0.95;
+}
+.modal-hero-meta span { display: inline-flex; align-items: center; gap: 8px; }
+.modal-hero-meta svg { width: 15px; height: 15px; }
+
+.modal-body {
+  padding: 60px max(48px, 7vw) 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media (max-width: 700px) { .modal-body { padding: 44px 22px 0; } }
+
+.modal-section { margin-top: 64px; }
+.modal-section:first-child { margin-top: 0; }
+.modal-section h4 {
+  font-size: clamp(26px, 3.4vw, 36px);
+  margin-bottom: 22px;
+  display: flex; align-items: center; gap: 14px;
+  color: var(--green-900);
+}
+.modal-section h4::before {
+  content: ""; width: 32px; height: 1px; background: var(--amber-500);
+}
+.modal-overview {
+  font-size: clamp(17px, 1.8vw, 20px);
+  color: var(--ink-700);
+  line-height: 1.7;
+  max-width: 70ch;
+}
+.modal-overview + .modal-overview { margin-top: 22px; }
+
+.hl-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin: 0; padding: 0; list-style: none;
+}
+.hl-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 24px 22px;
+  display: flex; flex-direction: column; gap: 14px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.hl-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.hl-icon {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--cream-100);
+  display: grid; place-items: center;
+  color: var(--green-800);
+}
+.hl-icon svg { width: 22px; height: 22px; }
+.hl-text {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--ink-700);
+  font-weight: 500;
+}
+
+/* Altitude profile */
+.alt-profile {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 28px 28px 20px;
+  margin-top: 8px;
+}
+.alt-profile-header {
+  display: flex; justify-content: space-between; align-items: baseline;
+  margin-bottom: 18px;
+  flex-wrap: wrap; gap: 10px;
+}
+.alt-profile-header h5 {
+  font-family: var(--font-body); font-weight: 600;
+  font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--ink-700);
+  margin: 0;
+}
+.alt-profile-header span {
+  font-size: 13px; color: var(--ink-500);
+}
+.alt-svg { width: 100%; height: auto; display: block; }
+.alt-axis-label {
+  font-family: var(--font-body); font-size: 10px; fill: var(--ink-500);
+  letter-spacing: 0.04em;
+}
+.alt-grid-line { stroke: var(--line); stroke-width: 1; }
+
+/* itinerary */
+.itinerary {
+  display: grid;
+  gap: 18px;
+}
+.day-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 28px 30px;
+  display: grid;
+  grid-template-columns: 110px 1fr auto;
+  gap: 28px;
+  align-items: start;
+  position: relative;
+  transition: box-shadow 0.25s ease;
+}
+.day-card:hover { box-shadow: var(--shadow-md); }
+@media (max-width: 720px) {
+  .day-card { grid-template-columns: 1fr; gap: 16px; padding: 22px; }
+}
+.day-num-block {
+  display: flex; flex-direction: column; gap: 4px;
+  padding-right: 24px;
+  border-right: 1px solid var(--line);
+}
+@media (max-width: 720px) {
+  .day-num-block { border-right: 0; padding-right: 0; padding-bottom: 14px; border-bottom: 1px solid var(--line); flex-direction: row; align-items: baseline; gap: 14px; }
+}
+.day-num-block .label {
+  font-family: var(--font-body);
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ink-500);
+}
+.day-num-block .num {
+  font-family: var(--font-display);
+  color: var(--green-800);
+  font-size: 44px;
+  line-height: 1;
+}
+@media (max-width: 720px) {
+  .day-num-block .num { font-size: 32px; }
+}
+.day-content h6 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--ink-900);
+  margin: 0 0 8px;
+  line-height: 1.25;
+}
+.day-content .day-time {
+  font-size: 13px; color: var(--ink-500);
+  display: inline-flex; align-items: center; gap: 6px;
+  margin-bottom: 14px;
+}
+.day-content .day-time svg { width: 13px; height: 13px; }
+.day-content p {
+  font-size: 15px;
+  color: var(--ink-700);
+  line-height: 1.65;
+  margin: 0 0 14px;
+}
+.day-tags {
+  display: flex; flex-wrap: wrap; gap: 6px;
+}
+.day-tag {
+  font-size: 12px;
+  padding: 5px 12px;
+  background: var(--cream-100);
+  color: var(--green-800);
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+}
+.day-altitude {
+  text-align: right;
+  padding-left: 24px;
+  border-left: 1px solid var(--line);
+  display: flex; flex-direction: column; gap: 4px;
+  align-self: stretch;
+  justify-content: center;
+}
+@media (max-width: 720px) {
+  .day-altitude { border-left: 0; padding-left: 0; text-align: left; padding-top: 12px; border-top: 1px solid var(--line); flex-direction: row; align-items: baseline; gap: 10px; justify-content: flex-start; }
+}
+.day-altitude .alt-num {
+  font-family: var(--font-display);
+  font-size: 26px;
+  color: var(--green-800);
+  line-height: 1;
+}
+.day-altitude .alt-label {
+  font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--ink-500);
+}
+
+/* pricing table */
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.price-table th, .price-table td {
+  padding: 12px 18px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  font-size: 15px;
+}
+.price-table th {
+  background: var(--green-800);
+  color: var(--white);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.price-table tr:last-child td { border-bottom: none; }
+.price-table td:last-child {
+  font-family: var(--font-display);
+  font-size: 18px;
+  color: var(--green-800);
+  text-align: right;
+}
+
+/* included / not included */
+.inc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+@media (max-width: 600px) { .inc-grid { grid-template-columns: 1fr; } }
+.inc-col h5 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+  display: flex; align-items: center; gap: 8px;
+}
+.inc-col.in h5 { color: #2f6043; }
+.inc-col.out h5 { color: #8a3a23; }
+.inc-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.inc-list li {
+  display: flex; gap: 10px; align-items: flex-start;
+  font-size: 14.5px;
+  color: var(--ink-600);
+  line-height: 1.5;
+}
+.inc-list li::before {
+  flex-shrink: 0; margin-top: 7px;
+  width: 14px; height: 14px;
+  background-size: contain; background-repeat: no-repeat;
+}
+.inc-col.in li::before {
+  content: "";
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path d='M3 8l3 3 7-7' fill='none' stroke='%232f6043' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+}
+.inc-col.out li::before {
+  content: "";
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path d='M4 4l8 8M12 4l-8 8' fill='none' stroke='%238a3a23' stroke-width='2' stroke-linecap='round'/></svg>");
+}
+
+.modal-cta {
+  display: flex; gap: 12px; flex-wrap: wrap;
+  padding-top: 28px; margin-top: 36px;
+  border-top: 1px solid var(--line);
+}
+
+/* big bottom CTA */
+.detail-cta-band {
+  margin: 96px calc(-1 * max(48px, 7vw)) 0;
+  padding: 80px max(48px, 7vw);
+  background: var(--green-900);
+  color: var(--cream-50);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.detail-cta-band::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 20% 30%, rgba(217,135,57,0.12), transparent 60%),
+              radial-gradient(circle at 80% 70%, rgba(217,135,57,0.08), transparent 55%);
+  pointer-events: none;
+}
+.detail-cta-band > * { position: relative; }
+.detail-cta-band h3 {
+  color: var(--cream-50);
+  font-size: clamp(32px, 4.4vw, 52px);
+  margin-bottom: 18px;
+  max-width: 22ch;
+  margin-left: auto; margin-right: auto;
+  line-height: 1.1;
+}
+.detail-cta-band p {
+  color: rgba(253,250,243,0.78);
+  font-size: 17px;
+  max-width: 56ch;
+  margin: 0 auto 32px;
+  line-height: 1.6;
+}
+.detail-cta-band .btn-row {
+  display: inline-flex; gap: 14px; flex-wrap: wrap; justify-content: center;
+}
+@media (max-width: 700px) {
+  .detail-cta-band { margin: 72px -22px 0; padding: 60px 22px; }
+}
+
+/* you might also like */
+.also-like {
+  padding: 0 max(48px, 7vw) 96px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media (max-width: 700px) { .also-like { padding: 0 22px 64px; } }
+.also-like h4 {
+  font-size: clamp(26px, 3.4vw, 36px);
+  margin-bottom: 28px;
+  margin-top: 80px;
+  display: flex; align-items: center; gap: 14px;
+  color: var(--green-900);
+}
+.also-like h4::before { content: ""; width: 32px; height: 1px; background: var(--amber-500); }
+.also-like-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+}
+.also-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid var(--line);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex; flex-direction: column;
+}
+.also-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.also-card-img { aspect-ratio: 16/10; background: var(--green-800); overflow: hidden; }
+.also-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.also-card:hover .also-card-img img { transform: scale(1.04); }
+.also-card-body { padding: 22px 24px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.also-card h6 { font-family: var(--font-display); font-size: 22px; margin: 0; line-height: 1.2; }
+.also-card .also-meta { font-size: 13px; color: var(--ink-500); letter-spacing: 0.04em; }
+.also-card .also-foot {
+  margin-top: auto; padding-top: 14px;
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-size: 13px; color: var(--ink-500);
+}
+.also-card .also-price {
+  font-family: var(--font-display); font-size: 18px; color: var(--green-800);
+}
+
+/* ---------- Reviews ---------- */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+@media (max-width: 880px) { .reviews-grid { grid-template-columns: 1fr; } }
+.review-card {
+  background: var(--cream-50);
+  border-radius: var(--radius-lg);
+  padding: 30px 28px;
+  border: 1px solid var(--line);
+  position: relative;
+  display: flex; flex-direction: column; gap: 16px;
+}
+.review-card::before {
+  content: "“";
+  position: absolute;
+  top: -12px; left: 22px;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--amber-500);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 50px;
+  line-height: 1.1;
+  display: grid; place-items: center;
+  padding-top: 14px;
+}
+.review-stars {
+  color: var(--amber-500);
+  letter-spacing: 2px;
+  font-size: 15px;
+  margin-top: 14px;
+}
+.review-quote {
+  font-family: var(--font-display);
+  font-size: 19px;
+  line-height: 1.45;
+  color: var(--ink-800);
+}
+.review-attr {
+  display: flex; flex-direction: column;
+  font-size: 14px;
+  border-top: 1px dashed var(--line);
+  padding-top: 16px;
+  margin-top: auto;
+}
+.review-name { font-weight: 600; color: var(--ink-800); }
+.review-meta { color: var(--ink-500); font-size: 13px; margin-top: 2px; }
+
+/* ---------- FAQ ---------- */
+.faq-list {
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex; flex-direction: column;
+  gap: 12px;
+}
+.faq-item {
+  background: var(--cream-50);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+.faq-item.open { box-shadow: var(--shadow-md); }
+.faq-q {
+  width: 100%;
+  text-align: left;
+  padding: 20px 26px;
+  display: flex; align-items: center; justify-content: space-between; gap: 18px;
+  font-family: var(--font-display);
+  font-size: 19px;
+  color: var(--ink-900);
+}
+.faq-toggle {
+  flex-shrink: 0;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: var(--cream-100);
+  display: grid; place-items: center;
+  transition: background 0.2s ease, transform 0.25s ease;
+}
+.faq-item.open .faq-toggle {
+  background: var(--amber-500);
+  transform: rotate(45deg);
+}
+.faq-toggle svg { width: 14px; height: 14px; transition: color 0.2s ease; }
+.faq-item.open .faq-toggle svg { color: var(--white); }
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.faq-a-inner {
+  padding: 0 26px 22px;
+  color: var(--ink-600);
+  font-size: 16px;
+  line-height: 1.65;
+  max-width: 65ch;
+}
+
+/* ---------- Contact ---------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 50px;
+  align-items: stretch;
+}
+@media (max-width: 880px) { .contact-grid { grid-template-columns: 1fr; } }
+.contact-text h2 { font-size: clamp(34px, 5vw, 56px); }
+.contact-channels {
+  margin-top: 36px;
+  display: flex; flex-direction: column; gap: 14px;
+}
+.contact-channel {
+  display: flex; align-items: center; gap: 18px;
+  padding: 18px 22px;
+  border-radius: var(--radius-md);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.14);
+  color: var(--cream-50);
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+.contact-channel:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.28);
+  transform: translateY(-1px);
+}
+.contact-channel-icon {
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  background: var(--amber-500);
+  display: grid; place-items: center;
+  flex-shrink: 0;
+}
+.contact-channel-icon svg { width: 22px; height: 22px; color: var(--white); }
+.contact-channel-text small {
+  display: block; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(255,253,249,0.6);
+  margin-bottom: 2px;
+}
+.contact-channel-text b {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 400;
+  word-break: break-word;
+}
+.contact-map {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  min-height: 380px;
+  background: var(--green-700);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+.contact-map iframe { width: 100%; height: 100%; border: 0; min-height: 380px; }
+
+/* ---------- Footer ---------- */
+.footer {
+  background: var(--ink-900);
+  color: rgba(255,253,249,0.72);
+  padding: 60px 0 30px;
+  font-size: 14px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 50px;
+}
+.footer-grid h5 {
+  font-family: var(--font-body);
+  color: var(--white);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 0 0 16px;
+}
+.footer-grid ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.footer-grid a:hover { color: var(--amber-400); }
+.footer .brand-name { color: var(--white); font-size: 22px; }
+.footer-tag {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 17px;
+  color: rgba(255,253,249,0.72);
+  margin-top: 14px;
+  max-width: 32ch;
+}
+.footer-social { display: flex; gap: 10px; margin-top: 20px; }
+.footer-social a {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: rgba(255,253,249,0.08);
+  display: grid; place-items: center;
+  transition: background 0.2s ease;
+}
+.footer-social a:hover { background: var(--amber-500); color: var(--white); }
+.footer-social svg { width: 16px; height: 16px; }
+.footer-bottom {
+  margin-top: 50px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,253,249,0.12);
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+  font-size: 13px;
+  color: rgba(255,253,249,0.5);
+}
+@media (max-width: 720px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+}
+
+/* ---------- WhatsApp Float ---------- */
+.wa-float {
+  position: fixed;
+  right: 22px; bottom: 22px;
+  z-index: 90;
+  background: #25d366;
+  color: var(--white);
+  border-radius: 999px;
+  padding: 14px 22px 14px 18px;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 12px 30px -8px rgba(37,211,102,0.55), 0 4px 12px rgba(0,0,0,0.18);
+  display: inline-flex; align-items: center; gap: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.wa-float:hover { transform: translateY(-2px); }
+.wa-float svg { width: 22px; height: 22px; }
+.wa-float-label { display: inline; }
+@media (max-width: 520px) {
+  .wa-float { padding: 14px; border-radius: 50%; }
+  .wa-float-label { display: none; }
+}
+.wa-float::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  border: 2px solid #25d366;
+  animation: wa-ping 2.4s ease-out infinite;
+  pointer-events: none;
+}
+@keyframes wa-ping {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.35); opacity: 0; }
+}
+
+/* ---------- Reveal ---------- */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.in { opacity: 1; transform: none; }
+
+/* ---------- Guide card ---------- */
+.guide-card {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px;
+  background: var(--cream-100);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+}
+.guide-avatar {
+  flex-shrink: 0;
+  width: 88px; height: 88px;
+  border-radius: 50%;
+  background: var(--green-700);
+  color: var(--cream-100);
+  display: grid; place-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.guide-avatar svg { width: 64px; height: 64px; }
+.guide-avatar-note {
+  position: absolute;
+  bottom: 6px; left: 0; right: 0;
+  text-align: center;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,253,249,0.7);
+}
+
+/* ---------- Body lock ---------- */
+body.locked { overflow: hidden; }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M2 20l5.5-9 4.5 7 3-5 7 7H2z" fill="#fff"/><circle cx="17" cy="6" r="2.2" fill="#fff"/></svg>
+      </span>
+      <span class="brand-text">
+        <span class="brand-name">Magic Beyond Himalaya</span>
+        <span class="brand-tag">Guided treks · Nepal</span>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#treks">Treks</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-cta" href="https://wa.me/9779851353347?text=Hi%20Sandip%2C%20I%20found%20your%20website%20and%20I%27m%20interested%20in%20trekking%20in%20Nepal.%20Could%20you%20tell%20me%20more%3F" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M20.5 3.5A11 11 0 0 0 3.4 17.6L2 22l4.6-1.3A11 11 0 1 0 20.5 3.5zM12 20a8 8 0 0 1-4-1.1l-.3-.2-2.7.8.8-2.6-.2-.3a8 8 0 1 1 6.4 3.4zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-1.4-.7-2.4-1.3-3.3-2.9-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.9c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.2 0 1.3 1 2.6 1.1 2.7.1.2 1.9 2.9 4.5 4 1.6.7 2.3.7 3 .6.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1z"/></svg>
+        WhatsApp
+      </a>
+    </nav>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<a id="top"></a>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-bg" role="img" aria-label="Snow-dusted village beneath Mt Manaslu"></div>
+  <div class="hero-inner">
+    <div>
+      <p class="eyebrow" style="color:var(--amber-400);">Local Nepali guides · Since 2017</p>
+      <h1>Every step <em>tells a story</em>.</h1>
+      <p class="hero-tagline">Guided treks through Nepal's most breathtaking landscapes.</p>
+      <p class="hero-sub">I'm Sandip — a local guide raised in the foothills of these mountains. We craft small-group treks that connect you with the people, traditions, and scenery that make the Himalaya unforgettable.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#treks">
+          Explore treks
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://wa.me/9779851353347?text=Hi%20Sandip%2C%20I%20found%20your%20website%20and%20I%27m%20interested%20in%20trekking%20in%20Nepal.%20Could%20you%20tell%20me%20more%3F">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20.5 3.5A11 11 0 0 0 3.4 17.6L2 22l4.6-1.3A11 11 0 1 0 20.5 3.5zM12 20a8 8 0 0 1-4-1.1l-.3-.2-2.7.8.8-2.6-.2-.3a8 8 0 1 1 6.4 3.4zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-1.4-.7-2.4-1.3-3.3-2.9-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.9c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.2 0 1.3 1 2.6 1.1 2.7.1.2 1.9 2.9 4.5 4 1.6.7 2.3.7 3 .6.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1z"/></svg>
+          Message on WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="hero-meta">
+      <span class="hero-meta-num">8+</span>
+      <span>Years guiding</span>
+      <span style="opacity:0.55;">in the Himalaya</span>
+    </div>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-photo reveal">
+        <!-- This is a guest summit photo. REPLACE with a portrait of Sandip if preferred. -->
+        <img src="images/summit-pose.jpeg" alt="A trekker celebrates beside prayer flags at the summit." loading="lazy">
+        <span class="about-photo-stamp">A guest, summit day</span>
+        <div class="about-photo-caption">Larkya La Pass — 5,106&nbsp;m</div>
+      </div>
+      <div class="about-text reveal">
+        <p class="eyebrow">A note from your guide</p>
+        <h2 class="section-title">More than a trek — a journey into the heart of the mountains.</h2>
+        <p class="lead">For me, guiding isn't a job. It's the chance to share the trails, villages, and stories I grew up with.</p>
+        <p>Since 2017 we've led travellers through the awe-inspiring landscapes of the Himalaya — from quiet rhododendron forests to the high passes above 5,000&nbsp;m. Every itinerary is shaped around the people who live along the trail, so each day is as much about the chai and the conversation as it is the view.</p>
+        <p>We work with local Nepali guides from across the Himalayan regions. Hiring locally keeps your trip authentic and makes sure your money supports the communities that make these mountains feel like home.</p>
+        <div class="guide-card">
+          <!-- REPLACE: Add a portrait photo of Sandip — file goes in images/sandip.jpg -->
+          <div class="guide-avatar" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="24" r="11" fill="currentColor" opacity="0.4"/><path d="M10 58c2-12 12-18 22-18s20 6 22 18" fill="currentColor" opacity="0.4"/></svg>
+            <span class="guide-avatar-note">Photo of Sandip</span>
+          </div>
+          <div>
+            <div class="about-sig-name">Sandip</div>
+            <div class="about-sig-role">Founder &amp; Lead Guide · Kathmandu, Nepal</div>
+            <p style="font-size:14px; color:var(--ink-500); margin-top:8px; max-width:34ch;">Born and raised in the Nepali hills. 8+ years guiding across the Annapurna, Langtang, Manaslu and Everest regions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats reveal">
+      <div><div class="stat-num">2017</div><div class="stat-label">Founded</div></div>
+      <div><div class="stat-num">100%</div><div class="stat-label">Local Nepali guides</div></div>
+      <div><div class="stat-num">6</div><div class="stat-label">Signature treks</div></div>
+      <div><div class="stat-num">All</div><div class="stat-label">Permits included</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TREKS ============ -->
+<section class="section section-dark" id="treks">
+  <div class="container">
+    <div class="treks-head reveal">
+      <div>
+        <p class="eyebrow">Our treks</p>
+        <h2 class="section-title">Six routes. One promise: every step matters.</h2>
+        <p class="section-lede">From a four-day window into the Annapurna foothills to an eighteen-day passage across the Manaslu Circuit. Tap any trek for the day-by-day, what's included, and pricing.</p>
+      </div>
+    </div>
+
+    <div class="filter-bar reveal" role="tablist" id="filterBar" style="margin-bottom:34px;">
+      <span class="filter-group-label">Filter</span>
+      <button class="filter-chip active" data-filter-type="difficulty" data-filter="all">All treks</button>
+      <button class="filter-chip" data-filter-type="difficulty" data-filter="easy">Easy</button>
+      <button class="filter-chip" data-filter-type="difficulty" data-filter="moderate">Moderate</button>
+      <button class="filter-chip" data-filter-type="difficulty" data-filter="challenging">Challenging</button>
+      <button class="filter-chip" data-filter-type="difficulty" data-filter="strenuous">Strenuous</button>
+      <span style="width:1px; background:rgba(255,255,255,0.18); margin: 4px 8px;"></span>
+      <button class="filter-chip active" data-filter-type="length" data-filter="all">Any length</button>
+      <button class="filter-chip" data-filter-type="length" data-filter="short">Short&nbsp;(≤5d)</button>
+      <button class="filter-chip" data-filter-type="length" data-filter="medium">Medium&nbsp;(6–10d)</button>
+      <button class="filter-chip" data-filter-type="length" data-filter="long">Long&nbsp;(11d+)</button>
+    </div>
+
+    <div class="trek-grid" id="trekGrid"><!-- cards injected by JS --></div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="section" id="reviews">
+  <div class="container">
+    <div class="reveal" style="text-align:center; max-width:680px; margin:0 auto 60px;">
+      <p class="eyebrow" style="justify-content:center;">What trekkers say</p>
+      <h2 class="section-title">Stories from the trail.</h2>
+      <p class="section-lede" style="margin-left:auto; margin-right:auto;">Real notes from travellers who walked these mountains with us.</p>
+    </div>
+    <div class="reviews-grid">
+      <article class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">Sandip made our Langtang trek unforgettable. His knowledge of the trails and local culture turned a great hike into a life-changing experience.</p>
+        <div class="review-attr">
+          <span class="review-name">Anna &amp; Mark</span>
+          <span class="review-meta">Netherlands · Langtang Valley · Oct&nbsp;2024</span>
+        </div>
+      </article>
+      <article class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">As a solo traveller I was nervous, but Sandip's warmth and expertise put me at ease from day one. Couldn't recommend more highly.</p>
+        <div class="review-attr">
+          <span class="review-name">James L.</span>
+          <span class="review-meta">United Kingdom · Annapurna Circuit · Mar&nbsp;2025</span>
+        </div>
+      </article>
+      <article class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">The Manaslu trek was the highlight of my year. Remote, raw, and absolutely stunning. Sandip knows every village and every viewpoint.</p>
+        <div class="review-attr">
+          <span class="review-name">Sophie K.</span>
+          <span class="review-meta">Germany · Manaslu + Tsum Valley · Nov&nbsp;2024</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section section-cream tight" id="faq">
+  <div class="container">
+    <div class="reveal" style="text-align:center; max-width:680px; margin:0 auto 50px;">
+      <p class="eyebrow" style="justify-content:center;">Before you go</p>
+      <h2 class="section-title">Common questions.</h2>
+    </div>
+    <div class="faq-list" id="faqList"><!-- injected --></div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section section-dark" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-text reveal">
+        <p class="eyebrow">Plan your trip</p>
+        <h2>Ready for your adventure?</h2>
+        <p class="section-lede">Whether you have a question, want to compare routes, or you're ready to lock in dates — Sandip is just a message away. Most messages are answered within a few hours, Nepal time.</p>
+
+        <div class="contact-channels">
+          <a class="contact-channel" href="https://wa.me/9779851353347?text=Hi%20Sandip%2C%20I%20found%20your%20website%20and%20I%27m%20interested%20in%20trekking%20in%20Nepal.%20Could%20you%20tell%20me%20more%3F" target="_blank" rel="noopener">
+            <span class="contact-channel-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11 11 0 0 0 3.4 17.6L2 22l4.6-1.3A11 11 0 1 0 20.5 3.5zM12 20a8 8 0 0 1-4-1.1l-.3-.2-2.7.8.8-2.6-.2-.3a8 8 0 1 1 6.4 3.4zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-1.4-.7-2.4-1.3-3.3-2.9-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.9c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.2 0 1.3 1 2.6 1.1 2.7.1.2 1.9 2.9 4.5 4 1.6.7 2.3.7 3 .6.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1z"/></svg>
+            </span>
+            <span class="contact-channel-text">
+              <small>WhatsApp · Fastest reply</small>
+              <b>+977 985 135 3347</b>
+            </span>
+          </a>
+          <a class="contact-channel" href="mailto:magicbeyondhimalaya@gmail.com">
+            <span class="contact-channel-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            </span>
+            <span class="contact-channel-text">
+              <small>Email</small>
+              <b>magicbeyondhimalaya@gmail.com</b>
+            </span>
+          </a>
+          <a class="contact-channel" href="https://maps.app.goo.gl/V1rbKJxa65syVGEUA" target="_blank" rel="noopener">
+            <span class="contact-channel-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-7.6 7-13a7 7 0 0 0-14 0c0 5.4 7 13 7 13z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            </span>
+            <span class="contact-channel-text">
+              <small>Find us</small>
+              <b>Near Kathmandu, Nepal</b>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-map reveal">
+        <iframe
+          loading="lazy"
+          src="https://www.google.com/maps?q=Kathmandu%20Nepal&output=embed"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Magic Beyond Himalaya — Kathmandu, Nepal"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="#top" class="brand" style="color:var(--white);">
+          <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M2 20l5.5-9 4.5 7 3-5 7 7H2z" fill="#fff"/><circle cx="17" cy="6" r="2.2" fill="#fff"/></svg></span>
+          <span class="brand-text">
+            <span class="brand-name">Magic Beyond Himalaya</span>
+            <span class="brand-tag">Guided treks · Nepal</span>
+          </span>
+        </a>
+        <p class="footer-tag">Every step tells a story. Authentic, guide-led journeys through the Nepali Himalaya since 2017.</p>
+        <div class="footer-social">
+          <a href="https://wa.me/9779851353347" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11 11 0 0 0 3.4 17.6L2 22l4.6-1.3A11 11 0 1 0 20.5 3.5zM12 20a8 8 0 0 1-4-1.1l-.3-.2-2.7.8.8-2.6-.2-.3a8 8 0 1 1 6.4 3.4z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h3l1-4h-4V7.5C13 6.4 13.3 5.7 14.9 5.7H17V2.2C16.7 2.2 15.5 2 14.1 2 11.2 2 9.5 3.7 9.5 6.9V10H6.5v4h3v8H13z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#about">About Sandip</a></li>
+          <li><a href="#treks">Our Treks</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Get in touch</h5>
+        <ul>
+          <li><a href="https://wa.me/9779851353347" target="_blank" rel="noopener">+977 985 135 3347</a></li>
+          <li><a href="mailto:magicbeyondhimalaya@gmail.com">magicbeyondhimalaya@gmail.com</a></li>
+          <li><a href="https://maps.app.goo.gl/V1rbKJxa65syVGEUA" target="_blank" rel="noopener">Kathmandu, Nepal</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Magic Beyond Himalaya. All rights reserved.</span>
+      <span>Made with care in Kathmandu.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ FLOATING WHATSAPP ============ -->
+<a class="wa-float" href="https://wa.me/9779851353347?text=Hi%20Sandip%2C%20I%20found%20your%20website%20and%20I%27m%20interested%20in%20trekking%20in%20Nepal.%20Could%20you%20tell%20me%20more%3F" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11 11 0 0 0 3.4 17.6L2 22l4.6-1.3A11 11 0 1 0 20.5 3.5zM12 20a8 8 0 0 1-4-1.1l-.3-.2-2.7.8.8-2.6-.2-.3a8 8 0 1 1 6.4 3.4zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-1.4-.7-2.4-1.3-3.3-2.9-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.9c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.2 0 1.3 1 2.6 1.1 2.7.1.2 1.9 2.9 4.5 4 1.6.7 2.3.7 3 .6.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1z"/></svg>
+  <span class="wa-float-label">Chat on WhatsApp</span>
+</a>
+
+<!-- ============ MODAL ROOT ============ -->
+<div class="modal-backdrop" id="modalRoot" aria-hidden="true"></div>
+
+<script>
+/* ============ DATA ============ */
+const TREKS = [
+  {
+    id: 'poon-hill',
+    name: 'Ghorepani Poon Hill',
+    region: 'Annapurna · Foothills',
+    days: 4,
+    difficulty: 'Easy to Moderate',
+    diffKey: 'easy',
+    altitude: '3,210 m',
+    fromPrice: 150,
+    season: 'Spring (Mar–May) · Autumn (Sep–Nov)',
+    image: 'images/sunrise-peak.jpeg',
+    overview: "A short trek in Nepal's Annapurna region, famed for breathtaking sunrise views over the Himalayas. Stand at Poon Hill at first light and watch the sun ignite Dhaulagiri, Annapurna, and Machhapuchhre. The route winds through rhododendron forests, Gurung villages, and tiered terraces — a perfect first taste of Nepal.",
+    overview2: "What makes this trek special isn't just the altitude on the chart — it's the rhythm of the days. You'll wake to the sound of village roosters, walk through forests that bloom red and pink in spring, share dal bhat with families who've lived on these slopes for generations, and stand at Poon Hill before dawn watching the first gold light hit twenty Himalayan peaks at once. It's the perfect introduction to Nepal: rich enough to feel transformative, gentle enough that anyone with two working legs and a sense of curiosity can do it.",
+    overview3: "Physically, this trek is honest work but never extreme. Plenty of stone-step climbs that test your thighs, but no real altitude risk and warm teahouses every night. Most days are 5–7 hours of walking with long breaks for tea and lunch. By the end you'll feel like you've earned every photograph — and you'll know which valley you want to come back to next time.",
+    highlights: [
+      ['Poon Hill sunrise over 20+ Himalayan peaks','sunrise'],
+      ['Rhododendron forests in full bloom (spring)','forest'],
+      ['Cultural immersion in Gurung villages','culture'],
+      ['Low altitude — minimal sickness risk','safe'],
+      ['Suitable for beginners and families','family']
+    ],
+    days_data: [
+      { day:1, route:'Pokhara → Nayapul → Ulleri', alt:2050, time:'5–6 hrs',
+        desc:"Scenic 1.5-hour drive from Pokhara to Nayapul, the trek's starting point. Walk through terraced farmland and cross suspension bridges past villages like Birethanti and Hile. The day ends with a steep ascent to Ulleri via 3,200 stone steps, with views of Annapurna South opening up as you climb.",
+        tags:['Terraced farms','Suspension bridges','Stone steps','Annapurna South views'] },
+      { day:2, route:'Ulleri → Ghorepani', alt:2860, time:'5–6 hrs',
+        desc:"Trek through dense rhododendron and oak forests (spectacular blooms in spring). Pass through Magar villages including Banthanti and Nangethanti. Arrive in Ghorepani, a Gurung-majority village with mountain views from every teahouse.",
+        tags:['Rhododendron forest','Magar villages','Mountain vistas'] },
+      { day:3, route:'Poon Hill (3,210m) → Tadapani', alt:2630, time:'6–7 hrs',
+        desc:"Pre-dawn hike to Poon Hill for a legendary sunrise over the Annapurna and Dhaulagiri ranges. On a clear morning you can see over 20 Himalayan peaks including Dhaulagiri (8,167m), Annapurna I (8,091m), and Machhapuchhre. Descend through forests to Tadapani with ongoing views of Annapurna South.",
+        tags:['Sunrise panorama','Dhaulagiri','Annapurna','20+ peaks'] },
+      { day:4, route:'Ghandruk → Pokhara', alt:1940, time:'4–5 hrs + 2 hr drive',
+        desc:"Explore Ghandruk, a picturesque Gurung village with traditional stone houses and mountain views. Visit local museums or enjoy cultural interactions with villagers. Drive back to Pokhara via Nayapul.",
+        tags:['Gurung village','Cultural museum','Traditional architecture'] }
+    ],
+    pricing: [['1 pax', 300],['2 pax', 225],['4 pax', 200],['6 pax', 180],['8 pax', 165],['9+ pax', 150]]
+  },
+  {
+    id: 'langtang',
+    name: 'Langtang Valley',
+    region: 'Langtang · North of Kathmandu',
+    days: 7,
+    difficulty: 'Moderate',
+    diffKey: 'moderate',
+    altitude: '4,773 m (Kyanjin Ri)',
+    fromPrice: 150,
+    season: 'Spring (Mar–May) · Autumn (Sep–Nov)',
+    image: 'images/forest-ridge.jpeg',
+    overview: 'Ideal for travellers with limited time who still want big Himalayan vistas, Tamang culture, and quiet trails. The route climbs through rhododendron forest into a sweeping glacial valley beneath Langtang Lirung (7,246 m), with the option to summit Tserko Ri for a 360° panorama.',
+    overview2: "Langtang has a quieter, more intimate feel than the headline treks. You walk for whole afternoons without seeing another tourist, share teahouses with yak herders, and arrive each evening to villages where the kitchen is still the heart of everyday life. The valley itself is breathtaking — rhododendron forest gives way to alpine pasture and finally to a wide glacial amphitheatre with Langtang Lirung looming over you.",
+    overview3: "There's a deeper layer here too. The 2015 earthquake hit this valley hard, and the rebuilt villages tell a story of resilience that's impossible to miss. Trekking Langtang means your money goes directly into a region that genuinely needs it — and the welcome you get from Tamang families along the way reflects that.",
+    highlights: [
+      ['Far fewer crowds than Everest or Annapurna','quiet'],
+      ['360° sunrise from Kyanjin Ri (4,773 m)','sunrise'],
+      ['Ancient Kyanjin Gompa monastery','culture'],
+      ['Deep Tamang cultural heritage','culture'],
+      ['Langtang National Park wildlife','wildlife']
+    ],
+    days_data: [
+      { day:1, route:'Kathmandu → Syabrubesi', alt:1460, time:'6–7 hrs drive',
+        desc:"Scenic drive through the Trishuli Valley with views of Ganesh Himal and the Langtang ranges. The road winds through small towns and terraced hillsides. Overnight in Syabrubesi, the gateway to the Langtang region.",
+        tags:['Trishuli Valley','Ganesh Himal views','Gateway village'] },
+      { day:2, route:'Syabrubesi → Lama Hotel', alt:2470, time:'5–6 hrs',
+        desc:"Follow the trail through subtropical forests, crossing the Bhote Koshi River on suspension bridges. The forest is home to langur monkeys and rich birdlife. The trail climbs steadily through shaded woodland.",
+        tags:['Subtropical forest','Langur monkeys','River crossings'] },
+      { day:3, route:'Lama Hotel → Langtang Village', alt:3500, time:'5–6 hrs',
+        desc:"Ascend through oak and rhododendron forests to Ghoda Tabela (an army outpost), then continue to Langtang Village. The village was rebuilt after the devastating 2015 earthquake and showcases resilient Tamang culture and architecture.",
+        tags:['Rhododendron forest','Earthquake memorial','Tamang culture'] },
+      { day:4, route:'Langtang → Kyanjin Gompa', alt:3800, time:'4–5 hrs',
+        desc:"Walk through yak pastures with mountain walls rising on both sides. Visit the local cheese factory and the ancient Kyanjin monastery. Optional afternoon hike to Langshisha Kharka for glacier views.",
+        tags:['Yak pastures','Cheese factory','Kyanjin monastery','Glacier views'] },
+      { day:5, route:'Kyanjin Ri (4,773m) → Lama Hotel', alt:2470, time:'6–7 hrs',
+        desc:"Early morning hike for the trek's highlight: a 360-degree sunrise panorama of the entire Langtang range including Langtang Lirung (7,227m), Yala Peak, and Dorje Lakpa. The more ambitious can push to Tserko Ri at 5,030m. Long descent back to Lama Hotel.",
+        tags:['360° panorama','Langtang Lirung','Summit day','Big descent'] },
+      { day:6, route:'Lama Hotel → Syabrubesi', alt:1470, time:'5–6 hrs',
+        desc:"Retrace the trail or take an alternative route via Sherpa Gaon, enjoying a final day in the forests and valley.",
+        tags:['Alternative route','Forest walk','Final valley views'] },
+      { day:7, route:'Syabrubesi → Kathmandu', alt:1400, time:'6–7 hrs drive',
+        desc:"Return journey through the Trishuli Valley with farewell dinner in Kathmandu.",
+        tags:['Return drive','Farewell dinner'] }
+    ],
+    pricing: [['1 pax', 325],['2 pax', 250],['4 pax', 225],['6 pax', 200],['8 pax', 175],['9+ pax', 150]]
+  },
+  {
+    id: 'annapurna-tilicho',
+    name: 'Annapurna Circuit + Tilicho Lake',
+    region: 'Annapurna · Full circuit',
+    days: 11,
+    difficulty: 'Challenging to Strenuous',
+    diffKey: 'challenging',
+    altitude: '5,416 m (Thorong La)',
+    fromPrice: 225,
+    season: 'Spring (Mar–May) · Autumn (Sep–Nov)',
+    image: 'images/manaslu-village.jpeg',
+    overview: 'A comprehensive Annapurna circuit with a side trip to Tilicho Lake (4,919 m) — one of the highest lakes on earth. Cross the iconic Thorong La Pass and descend to the sacred temple of Muktinath. The trail moves through jungle, alpine meadow, and arid Tibetan-feeling plateau in a single trip.',
+    overview2: "What's remarkable about this circuit is how many different worlds you walk through. You start in subtropical river valleys with banana trees and butterflies. By day five you're in alpine meadows. By day seven you're standing beside a turquoise glacial lake at nearly 5,000 metres. By day ten you've crossed a 5,416-metre pass into a landscape that feels more like Tibet than Nepal — arid, wide, and ancient.",
+    overview3: "This is a serious undertaking. The Thorong La crossing is genuinely challenging — you start in the dark, climb for hours in thin air, and only fully relax once you're on the other side. But the acclimatisation is built in, the team behind you is experienced, and the reward — Tilicho's blue water, Muktinath's temple bells, that long downhill into a different world — is unforgettable.",
+    highlights: [
+      ['Tilicho Lake — 4,919 m turquoise water','lake'],
+      ['Cross Thorong La Pass (5,416 m)','pass'],
+      ['Sacred Muktinath Temple','culture'],
+      ['Jungle to glacier ecosystems','nature'],
+      ['Tibetan-influenced upper Manang','culture']
+    ],
+    days_data: [
+      { day:1, route:'Kathmandu → Dharapani', alt:1860, time:'8–10 hrs drive',
+        desc:"Long scenic drive via Besisahar, following the Marsyangdi River through terraced farmland, subtropical forests, and Himalayan foothills. The landscape shifts dramatically as you climb toward the Annapurna region.",
+        tags:['Marsyangdi River','Terraced farms','Himalayan foothills'] },
+      { day:2, route:'Dharapani → Chame', alt:2710, time:'5–6 hrs',
+        desc:"Trail winds through pine forests with views of Annapurna II and Lamjung Himal emerging above the treeline. Pass traditional mani walls and Tibetan-style villages that mark the cultural transition into the upper Annapurna region.",
+        tags:['Pine forests','Annapurna II views','Mani walls','Tibetan villages'] },
+      { day:3, route:'Chame → Upper Pisang', alt:3300, time:'5–6 hrs',
+        desc:"Take the upper route for panoramic views of Pisang Peak and the Annapurna massif. Visit Braga Monastery en route, one of the oldest in the region with its cave-like rooms carved into the cliff face.",
+        tags:['Pisang Peak panorama','Braga Monastery','Upper route'] },
+      { day:4, route:'Pisang → Manang', alt:3540, time:'4–5 hrs',
+        desc:"Enter the arid Manang Valley, a dramatic contrast to the forests below. Use the afternoon to acclimatise with short hikes to Gangapurna Lake (milky blue glacial lake) or Ice Lake (stunning viewpoint at 4,600m).",
+        tags:['Manang Valley','Gangapurna Lake','Acclimatisation','Arid landscape'] },
+      { day:5, route:'Acclimatisation in Manang', alt:3540, time:'rest day',
+        desc:"Explore ancient monasteries, visit the Himalayan Rescue Association post for altitude sickness advice, or simply soak in the mountain atmosphere. This rest day is essential before the high-altitude days ahead.",
+        tags:['Rest day','Monasteries','Himalayan Rescue Association'] },
+      { day:6, route:'Manang → Tilicho Base Camp', alt:4150, time:'7–8 hrs',
+        desc:"A demanding day with steep ascent via Khangsar, the last village before Tilicho. Some sections are landslide-prone, requiring an early start and careful footing. The terrain grows increasingly raw and alpine.",
+        tags:['Steep ascent','Khangsar village','Landslide sections','Early start'] },
+      { day:7, route:'Tilicho Lake (4,919m) → Siri Kharka', alt:4060, time:'7–8 hrs',
+        desc:"The trek's hidden gem. Tilicho Lake sits at 4,919m, one of the world's highest lakes, its turquoise waters surrounded by Tilicho Peak and the Annapurna range. Start at dawn to avoid afternoon winds. The sight is genuinely breathtaking.",
+        tags:['Tilicho Lake','One of world\'s highest','Turquoise water','Dawn start'] },
+      { day:8, route:'Siri Kharka → Yak Kharka', alt:4060, time:'5 hrs',
+        desc:"Descend into the Thorong Khola Valley. Keep eyes open for blue sheep (bharal) on the rocky slopes. The landscape is stark and beautiful, preparing you mentally for the pass crossing ahead.",
+        tags:['Thorong Khola Valley','Blue sheep','Alpine desert'] },
+      { day:9, route:'Yak Kharka → Thorong High Camp', alt:4880, time:'4–5 hrs',
+        desc:"Short but significant hike to the base camp for tomorrow's pass crossing. Optional acclimatisation hike to a nearby viewpoint. Sleep as early as possible — tomorrow starts before dawn.",
+        tags:['High camp','Pass preparation','Early night'] },
+      { day:10, route:'Thorong La (5,416m) → Muktinath', alt:3760, time:'8–10 hrs',
+        desc:"The biggest day of the trek. Steep pre-dawn ascent in darkness, rewarded with extraordinary views of Dhaulagiri and Annapurna from the top. Descend to Muktinath and visit the sacred temple, holy to both Hindus and Buddhists. A day of physical challenge and spiritual arrival.",
+        tags:['Thorong La 5,416m','Pre-dawn start','Dhaulagiri views','Muktinath'] },
+      { day:11, route:'Muktinath → Pokhara', alt:820, time:'9–10 hrs drive',
+        desc:"Long drive down from the mountains to Pokhara. Overnight in a lakeside hotel — a well-earned rest after the circuit.",
+        tags:['Return drive','Pokhara lakeside'] }
+    ],
+    pricing: [['1 pax', 490],['2 pax', 350],['4 pax', 300],['6 pax', 275],['8 pax', 250],['9+ pax', 225]]
+  },
+  {
+    id: 'abc-poon',
+    name: 'Annapurna Base Camp + Poon Hill',
+    region: 'Annapurna · Sanctuary',
+    days: 8,
+    difficulty: 'Moderate to Challenging',
+    diffKey: 'moderate',
+    altitude: '4,130 m (ABC)',
+    fromPrice: 170,
+    season: 'Spring (Mar–May) · Autumn (Sep–Nov)',
+    image: 'images/trail-village.jpeg',
+    overview: "Combine the Annapurna Sanctuary — a glacial amphitheatre ringed by 8,000-metre giants — with the classic Poon Hill sunrise. A complete Annapurna experience packed into just over a week, ending with the warm waters of Jhinu Danda hot springs.",
+    overview2: "The Annapurna Sanctuary is one of those places that doesn't feel quite real when you're standing in it. You walk for days through forest and farmland, and then — all at once — the trail opens into a vast glacial bowl with 8,000-metre peaks rising in every direction. Annapurna I, Hiunchuli, Annapurna South, the unmistakable fang of Machhapuchhre. You sleep there, watch the sunrise paint them gold, and walk back down a changed person.",
+    overview3: "Adding Poon Hill at the start gives you the famous sunrise panorama before you've even started the main climb. And ending at Jhinu Danda means a soak in natural hot springs by the river on your last morning — exactly where sore legs need to be after a week in the mountains.",
+    highlights: [
+      ['Annapurna Sanctuary 360° views','vista'],
+      ['Machhapuchhre (Fishtail) up close','peak'],
+      ['Poon Hill sunrise included','sunrise'],
+      ['Jhinu Danda natural hot springs','reward'],
+      ['Spring rhododendron blooms','forest']
+    ],
+    days_data: [
+      { day:1, route:'Pokhara → Tikhedhunga → Ulleri', alt:2050, time:'2–3 hrs trek',
+        desc:"Drive from Pokhara to Tikhedhunga (2.5 hours), then a short trek to Ulleri through Magar villages and terraced fields with stone steps.",
+        tags:['Magar villages','Terraced fields','Stone steps'] },
+      { day:2, route:'Ulleri → Ghorepani', alt:2870, time:'5–6 hrs',
+        desc:"Ascend through dense rhododendron forests with mountain views building as you gain altitude. Teahouses in Ghorepani offer cozy stays and panoramic mountain views from the village.",
+        tags:['Rhododendron forest','Mountain views','Cozy teahouses'] },
+      { day:3, route:'Poon Hill sunrise → Tadapani', alt:2600, time:'7–8 hrs',
+        desc:"Pre-dawn hike to Poon Hill (3,210m) for the stunning sunrise panorama over the Annapurna and Dhaulagiri ranges. Then a long day descending through forests to Tadapani.",
+        tags:['Poon Hill sunrise','Panoramic views','Forest descent'] },
+      { day:4, route:'Tadapani → Sinuwa', alt:2340, time:'6–7 hrs',
+        desc:"Steep descent and ascent via Kimrong Khola. Cross suspension bridges, walk through rhododendron forests, and descend 2,500 stone steps to Chhomrong Khola before climbing to Sinuwa.",
+        tags:['Suspension bridges','Kimrong Khola','Steep stone steps'] },
+      { day:5, route:'Sinuwa → Deurali', alt:3230, time:'5–6 hrs',
+        desc:"Enter the bamboo forests along the Modi Khola River. Pass Hinku Cave and catch views of Machhapuchhre (Fishtail) through the canopy. Waterfalls line the narrow valley.",
+        tags:['Bamboo forests','Modi Khola','Hinku Cave','Machhapuchhre'] },
+      { day:6, route:'Deurali → MBC → ABC (4,130m)', alt:4130, time:'6–7 hrs',
+        desc:"The key day. Pass through Machhapuchhre Base Camp at 3,700m, then enter the Annapurna Sanctuary itself — a glacial amphitheatre with 360-degree views of Annapurna I, Hiunchuli, Annapurna South, and Machhapuchhre towering above you on all sides. Unforgettable.",
+        tags:['Annapurna Sanctuary','360° amphitheatre','Annapurna I','MBC'] },
+      { day:7, route:'ABC → Bamboo', alt:2310, time:'7–8 hrs',
+        desc:"Enjoy a final sunrise at ABC, then begin the long descent retracing steps through the sanctuary and back into the forests.",
+        tags:['ABC sunrise','Long descent','Forest return'] },
+      { day:8, route:'Jhinu Danda hot springs → Pokhara', alt:1760, time:'4 hrs trek',
+        desc:"Final morning trek to Jhinu Danda with a rewarding detour to natural hot springs by the Modi Khola river — perfect for sore muscles after a week of trekking. Drive back to Pokhara.",
+        tags:['Jhinu hot springs','Modi Khola','Trek completion'] }
+    ],
+    pricing: [['1 pax', 400],['2 pax', 280],['4 pax', 230],['6 pax', 200],['8 pax', 185],['9+ pax', 170]]
+  },
+  {
+    id: 'manaslu-tsum',
+    name: 'Manaslu + Tsum Valley',
+    region: 'Manaslu · Remote Himalaya',
+    days: 18,
+    difficulty: 'Challenging to Strenuous',
+    diffKey: 'strenuous',
+    altitude: '5,106 m (Larkya La)',
+    fromPrice: 430,
+    season: 'Spring (Mar–May) · Autumn (Sep–Nov)',
+    image: 'images/prayer-flags.jpeg',
+    overview: "An eighteen-day passage combining the sacred Tsum Valley — ancient monasteries, Tibetan refugee villages, the Milarepa Cave — with the full Manaslu Circuit, capped by the Larkya La Pass. One of Nepal's least crowded great walks, and a personal favourite.",
+    overview2: "Manaslu with Tsum Valley is, honestly, the trek I recommend to people who've already done one or two big Himalayan walks and want something deeper. The crowds thin almost completely after the first few days. The Tsum Valley feels like stepping back five hundred years — Buddhist monasteries carved into cliffs, Tibetan refugee villages with prayer wheels older than any of us, the cave where Milarepa is said to have meditated.",
+    overview3: "Then you rejoin the main circuit and walk for days under the shadow of Manaslu itself, the world's eighth-highest peak. The final pass — Larkya La at 5,106 metres — is one of the great mountain crossings, with views in every direction of peaks most people will only ever see from a plane. Eighteen days is a commitment. It is also, for many of our trekkers, the trip that ends up meaning the most.",
+    highlights: [
+      ['Sacred Tsum Valley monasteries','culture'],
+      ['Mt Manaslu (8,163 m) views','peak'],
+      ['Cross Larkya La Pass (5,106 m)','pass'],
+      ['Tibetan refugee villages','culture'],
+      ['Remote pristine trails','quiet'],
+      ['Birendra Lake','lake']
+    ],
+    days_data: [
+      { day:1, route:'Kathmandu → Machha Khola', alt:869, time:'8–10 hrs drive',
+        desc:"Long scenic drive through Nepal's countryside, passing terraced fields, traditional villages, and alongside the Trishuli and Budhi Gandaki rivers with glimpses into rural Nepali life.",
+        tags:['Countryside drive','Trishuli River','Budhi Gandaki','Rural villages'] },
+      { day:2, route:'Machha Khola → Jagat', alt:1340, time:'6–7 hrs',
+        desc:"Follow the Budhi Gandaki River, crossing suspension bridges and traversing lush forests. Cascading waterfalls and charming villages line the trail.",
+        tags:['Budhi Gandaki River','Suspension bridges','Waterfalls'] },
+      { day:3, route:'Jagat → Lokpa', alt:2240, time:'6–7 hrs',
+        desc:"Enter the gateway to the Tsum Valley, with a noticeable shift in culture and landscape. Views of Shringi Himal appear as you walk through serene pine forests.",
+        tags:['Tsum Valley gateway','Shringi Himal','Pine forests'] },
+      { day:4, route:'Lokpa → Chumling', alt:2386, time:'6–7 hrs',
+        desc:"Tibetan-influenced culture becomes prominent: ancient monasteries, mani walls, and traditional stone houses. Captivating views of Ganesh Himal.",
+        tags:['Tibetan culture','Ancient monasteries','Mani walls','Ganesh Himal'] },
+      { day:5, route:'Chumling → Chhokangparo', alt:3031, time:'5–6 hrs',
+        desc:"Ascend through fertile agricultural fields and dense forests. Panoramic vistas of Himalchuli and Ganesh Himal open up. Engage with the hospitable local community.",
+        tags:['Agricultural terraces','Himalchuli','Local community'] },
+      { day:6, route:'Chhokangparo → Nile via Milarepa Cave', alt:3361, time:'6–7 hrs',
+        desc:"Visit the sacred Milarepa Cave, steeped in Buddhist history and legend. Continue to Nile, the last village in the upper Tsum Valley, surrounded by towering mountains and ancient monasteries.",
+        tags:['Milarepa Cave','Sacred Buddhist site','Upper Tsum Valley'] },
+      { day:7, route:'Mu Gompa (3,700m) → Chhokangparo', alt:3031, time:'7–8 hrs',
+        desc:"Explore Mu Gompa, the largest monastery in the region, nestled amidst the mountains. Absorb the tranquil atmosphere and gain insights into monastic life before retracing your steps.",
+        tags:['Mu Gompa','Largest monastery','Monastic life'] },
+      { day:8, route:'Chhokangparo → Lokpa', alt:2240, time:'6–7 hrs',
+        desc:"Descend through the valley, appreciating the changing landscapes and reflecting on the sacred Tsum Valley experience.",
+        tags:['Valley descent','Tsum Valley farewell'] },
+      { day:9, route:'Lokpa → Deng', alt:1860, time:'6–7 hrs',
+        desc:"Rejoin the Manaslu Circuit trail. Cross suspension bridges and pass through bamboo forests with views of cascading waterfalls and rugged terrain.",
+        tags:['Manaslu Circuit junction','Bamboo forests','Waterfalls'] },
+      { day:10, route:'Deng → Namrung', alt:2630, time:'6–7 hrs',
+        desc:"Ascend through dense forests and picturesque villages. Namrung provides stunning views of Siring, Ganesh Himal, and Mt Himalchuli.",
+        tags:['Dense forests','Namrung village','Himalchuli views'] },
+      { day:11, route:'Namrung → Lho', alt:3180, time:'4–5 hrs',
+        desc:"Pass through Tibetan-influenced villages adorned with prayer flags and mani walls. In Lho, visit the Ribung Gompa and enjoy close-up views of Mt Manaslu (8,163m).",
+        tags:['Prayer flags','Ribung Gompa','Manaslu close-up'] },
+      { day:12, route:'Lho → Samagaon', alt:3530, time:'3–4 hrs',
+        desc:"A shorter trek allowing for acclimatisation. Samagaon is a village rich in Tibetan culture. Consider visiting Pungyen Gompa or enjoying views of Manaslu Glacier.",
+        tags:['Acclimatisation','Tibetan culture','Pungyen Gompa','Manaslu Glacier'] },
+      { day:13, route:'Acclimatisation in Samagaon', alt:3530, time:'rest day',
+        desc:"Rest day to adapt to altitude. Optional hikes to Birendra Lake (glacial lake) or Pungyen Gompa for breathtaking scenery and cultural immersion.",
+        tags:['Rest day','Birendra Lake','Optional hikes'] },
+      { day:14, route:'Samagaon → Samdo', alt:3860, time:'3–4 hrs',
+        desc:"Gentle ascent to Samdo, a Tibetan refugee village near the border. Observe traditional lifestyles and enjoy panoramic mountain views.",
+        tags:['Tibetan refugee village','Border region','Mountain panoramas'] },
+      { day:15, route:'Samdo → Dharmashala', alt:4460, time:'4–5 hrs',
+        desc:"Base camp for the Larkya La Pass. Basic facilities amidst rugged mountain terrain. Prepare mentally and physically for the challenging pass crossing tomorrow.",
+        tags:['Pass base camp','Rugged terrain','Preparation'] },
+      { day:16, route:'Larkya La (5,106m) → Bimthang', alt:3590, time:'8–9 hrs',
+        desc:"The trek's defining day. From the pass, panoramic views of Himlung Himal, Cheo Himal, Kang Guru, and Annapurna II stretch in every direction before the long descent to the serene valley of Bimthang.",
+        tags:['Larkya La 5,106m','Summit panorama','Himlung Himal','Big descent'] },
+      { day:17, route:'Bimthang → Gho', alt:2515, time:'5–6 hrs',
+        desc:"Descend through alpine meadows and rhododendron forests. Opportunities to spot wildlife in the peaceful environment.",
+        tags:['Alpine meadows','Rhododendron','Wildlife'] },
+      { day:18, route:'Gho → Tilche → Drive', alt:1500, time:'1.5 hrs + drive',
+        desc:"Final descent through charming villages and terraced fields, eventually joining the Annapurna Circuit trail at Dharapani. Drive to Kathmandu or Pokhara.",
+        tags:['Final descent','Terraced fields','Trek completion'] }
+    ],
+    pricing: [['1 pax', 900],['2 pax', 600],['4 pax', 525],['6 pax', 480],['8 pax', 450],['9+ pax', 430]]
+  },
+  {
+    id: 'ebc-gokyo',
+    name: 'Everest Base Camp + Gokyo Ri',
+    region: 'Khumbu · Everest region',
+    days: 15,
+    difficulty: 'Strenuous',
+    diffKey: 'strenuous',
+    altitude: '5,555 m (Kala Patthar)',
+    fromPrice: 600,
+    season: 'Spring (Mar–May) · Autumn (Sep–Nov)',
+    image: 'images/summit-pose.jpeg',
+    overview: "The ultimate Everest experience — classic Base Camp combined with Gokyo Ri and the technical Cho La Pass crossing. Stand among the turquoise Gokyo Lakes, sleep in Sherpa lodges, and watch sunrise paint Everest from Kala Patthar at 5,555 m.",
+    overview2: "This is the trek that lives in trekkers' imaginations. The flight into Lukla is a thing of legend in itself. From there you walk for two weeks through Sherpa country — Namche Bazaar buzzing with traders, Tengboche Monastery floating above the cloud line, prayer flags strung between mountains so high they don't quite seem real.",
+    overview3: "We do the longer Gokyo + Cho La variant rather than the straight Base Camp route because it doubles the experience: you get the lakes, the glacier, a real pass crossing, and Base Camp itself. Three big high-altitude days back to back. It's the hardest trek we run, and for most people who do it, it's also the best.",
+    highlights: [
+      ['Stand at Everest Base Camp (5,365 m)','peak'],
+      ['Sunrise on Kala Patthar (5,555 m)','sunrise'],
+      ['360° panorama from Gokyo Ri','vista'],
+      ['Cross glacial Cho La Pass','pass'],
+      ['Sherpa culture & Namche Bazaar','culture'],
+      ['Turquoise Gokyo Lakes','lake']
+    ],
+    days_data: [
+      { day:1, route:'Arrival in Kathmandu', alt:1400, time:'transfer day',
+        desc:"Arrive in Kathmandu. Airport pickup and hotel transfer. Meet your guide, discuss the trek, collect equipment including sleeping bag, down jacket, and crampons.",
+        tags:['Arrival','Gear check','Briefing'] },
+      { day:2, route:'Fly Lukla → Phakding', alt:2610, time:'3–4 hrs',
+        desc:"30-minute scenic flight from Kathmandu to Lukla (one of the world's most dramatic airport landings). Trek through the Dudh Koshi Valley past Sherpa villages and suspension bridges.",
+        tags:['Lukla flight','Dudh Koshi Valley','Sherpa villages'] },
+      { day:3, route:'Phakding → Namche Bazaar', alt:3441, time:'6–7 hrs',
+        desc:"Enter Sagarmatha National Park. The trail climbs steadily with your first views of Everest appearing above the ridgeline. Arrive at Namche, the bustling Sherpa capital and trading hub.",
+        tags:['Sagarmatha National Park','First Everest views','Namche Bazaar'] },
+      { day:4, route:'Acclimatisation in Namche', alt:3441, time:'rest day',
+        desc:"Hike to the Everest View Hotel or Syangboche for panoramic views. Visit the Sherpa Museum and explore the local markets selling everything from yak cheese to trekking gear.",
+        tags:['Acclimatisation','Everest View Hotel','Sherpa Museum'] },
+      { day:5, route:'Namche → Dole', alt:4200, time:'5–6 hrs',
+        desc:"Leave the main EBC trail and head toward Gokyo through rhododendron forests. Views of Ama Dablam and Kantega emerge as you climb.",
+        tags:['Gokyo route','Rhododendron','Ama Dablam','Kantega'] },
+      { day:6, route:'Dole → Machhermo', alt:4470, time:'4–5 hrs',
+        desc:"Gradual ascent through alpine meadows with views of Cho Oyu (8,188m) growing larger ahead. The air thins noticeably at this altitude.",
+        tags:['Alpine meadows','Cho Oyu','High altitude'] },
+      { day:7, route:'Machhermo → Gokyo', alt:4790, time:'5–6 hrs',
+        desc:"Walk alongside the massive Ngozumpa Glacier (Nepal's longest). Arrive at the third Gokyo Lake, its turquoise waters stunning against the grey glacial moraine.",
+        tags:['Ngozumpa Glacier','Gokyo Lakes','Turquoise water'] },
+      { day:8, route:'Gokyo Ri (5,357m) → Thangnak', alt:4700, time:'sunrise + 4 hrs',
+        desc:"Early morning climb for a 360-degree Himalayan panorama: Everest, Lhotse, Makalu, Cho Oyu, and the turquoise Gokyo Lakes far below. One of the finest viewpoints in the Himalayas. Descend to Thangnak.",
+        tags:['Gokyo Ri','360° panorama','Everest','Cho Oyu'] },
+      { day:9, route:'Cho La Pass (5,368m) → Dzongla', alt:4830, time:'6–9 hrs',
+        desc:"The trek's most technical day. Steep glacial traverse across Cho La Pass with potential ice and snow. Demanding but exhilarating, connecting the Gokyo and EBC valleys.",
+        tags:['Cho La Pass','Glacial traverse','Technical','Ice & snow'] },
+      { day:10, route:'Dzongla → Lobuche', alt:4910, time:'4–5 hrs',
+        desc:"Rejoin the classic EBC trail. Pass the memorials for fallen climbers — a sobering and moving reminder of the mountain's power.",
+        tags:['EBC trail','Climber memorials'] },
+      { day:11, route:'Lobuche → Gorak Shep → EBC', alt:5365, time:'7–8 hrs',
+        desc:"The day you've been waiting for. Trek through the Khumbu Icefall zone to stand at Everest Base Camp with the world's highest peak looming above. An emotional and unforgettable moment.",
+        tags:['Everest Base Camp','Khumbu Icefall','Summit of journey'] },
+      { day:12, route:'Kala Patthar (5,555m) → Pheriche', alt:4300, time:'full day',
+        desc:"Pre-dawn hike to Kala Patthar for THE classic Everest sunrise view — the summit glowing gold in the first light. Then begin the long descent to Pheriche for well-earned rest.",
+        tags:['Kala Patthar','Everest sunrise','Highest point'] },
+      { day:13, route:'Pheriche → Namche Bazaar', alt:3441, time:'6–7 hrs',
+        desc:"Retrace the route via Tengboche Monastery (the spiritual heart of the Khumbu), surrounded by Buddhist prayer flags and rhododendron forests.",
+        tags:['Tengboche Monastery','Prayer flags','Rhododendron'] },
+      { day:14, route:'Namche → Lukla', alt:2804, time:'6–7 hrs',
+        desc:"Final descent with celebration alongside the trek crew. A day of reflection on everything you've accomplished.",
+        tags:['Final descent','Celebration','Farewell'] },
+      { day:15, route:'Fly Lukla → Kathmandu', alt:1400, time:'30 min flight',
+        desc:"30-minute flight back to Kathmandu. Farewell dinner with your guide.",
+        tags:['Return flight','Farewell dinner','Trek complete'] }
+    ],
+    pricing: [['1–2 pax', 800],['3–4 pax', 700],['5–6 pax', 650],['7+ pax', 600]]
+  }
+];
+
+const INCLUDED = [
+  'Airport pickup (private transport to your hotel)',
+  'Ground transport to/from trek start and end',
+  'Experienced English-speaking guide — salary, food, insurance, transport, lodging covered',
+  'All required trekking permits',
+  'Mountain teahouse / guesthouse accommodation on trek',
+  'Equipment loan: sleeping bag, down jacket, trekking poles',
+  'Emergency rescue coordination',
+  'Government taxes and service charges',
+  'First-aid kit carried by your guide'
+];
+const NOT_INCLUDED = [
+  'Meals on the trail (purchased at teahouses along the route)',
+  'Drinks, snacks, bar bills',
+  'Hot showers, charging, Wi-Fi, heating at teahouses',
+  'Travel insurance — mandatory, must cover high-altitude trekking and evacuation',
+  'Personal trekking gear (boots, clothing, etc.)',
+  'Costs from unforeseen events (weather, strikes, landslides, illness)',
+  'Tips for guide and porters (customary in Nepal)'
+];
+
+const FAQS = [
+  ['How fit do I need to be?',
+   'For shorter low-altitude treks like Poon Hill, anyone in regular walking shape will do fine. For passes above 5,000 m, plan three to four months of cardio and a few long hikes back home with a loaded daypack. The honest answer: enthusiasm and steady walking matter more than raw athleticism — we walk slowly and steadily, every day.'],
+  ['What about altitude sickness?',
+   "Every itinerary above 4,000 m includes proper acclimatisation days. We walk slow, drink lots of water, and watch for symptoms together. I carry a first-aid kit and a pulse oximeter. If anyone shows signs of altitude sickness, descending is always the answer — we're never too proud to turn around."],
+  ['Do I need travel insurance?',
+   "Yes — it's mandatory. You need a policy that covers high-altitude trekking (check the altitude limit of your trek) and helicopter evacuation. World Nomads, Global Rescue, and SafetyWing are popular options."],
+  ['What should I pack?',
+   "Sturdy broken-in hiking boots, layered clothing (base layers, fleece, light down, waterproof shell), a 30–40 L daypack, sun protection, and a refillable water bottle. We loan you a sleeping bag, down jacket and poles, so leave those at home. I'll send a full packing list once you book."],
+  ['Can I join as a solo trekker?',
+   'Absolutely — a lot of our trekkers come solo. You get a private guide and your own room in teahouses where available. The 1-pax pricing covers it. Many solo travellers say the trip turned into the most social trip of their year.'],
+  ['How do I get to Nepal — do I need a visa?',
+   "Most visitors fly into Kathmandu (KTM) and get a visa-on-arrival at the airport: 30 days is around USD 50, 90 days around USD 125. Bring USD cash and a passport photo. I'll meet you at arrivals and drive you to your hotel — that's part of every package."],
+  ['Are meals included?',
+   "Meals aren't included so you can eat what you want, when you want. Teahouse menus are reasonable — budget around USD 25–35 per day for three meals plus tea. Your guide eats separately (covered)."],
+  ['What is the best time to trek in Nepal?',
+   "Two main seasons: Spring (March–May) brings warmer days, blooming rhododendrons, and good visibility. Autumn (September–November) has the clearest skies of the year and stable weather. Winter is possible on lower treks; the monsoon (June–August) is generally avoided except for rain-shadow regions like Upper Mustang."]
+];
+
+/* ============ TREK CARDS ============ */
+const grid = document.getElementById('trekGrid');
+const diffMap = { 'easy':'easy', 'moderate':'moderate', 'challenging':'challenging', 'strenuous':'strenuous' };
+
+function trekDuration(days) {
+  if (days <= 5) return 'short';
+  if (days <= 10) return 'medium';
+  return 'long';
+}
+
+TREKS.forEach((t, i) => {
+  const card = document.createElement('article');
+  card.className = 'trek-card reveal';
+  card.dataset.difficulty = t.diffKey;
+  card.dataset.length = trekDuration(t.days);
+  card.dataset.id = t.id;
+  card.style.transitionDelay = (i * 60) + 'ms';
+  card.innerHTML = `
+    <div class="trek-card-media">
+      <span class="diff-badge" data-d="${t.diffKey}">${t.difficulty}</span>
+      <img loading="lazy" src="${t.image}" alt="${t.name} trek scenery">
+    </div>
+    <div class="trek-card-body">
+      <div style="font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-500);">${t.region}</div>
+      <h3>${t.name}</h3>
+      <div class="trek-meta">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>${t.days} days</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 20l5-9 4 6 3-4 6 7H3z"/></svg>${t.altitude}</span>
+      </div>
+      <div class="trek-card-foot">
+        <div class="trek-price"><small>From</small><b>$${t.fromPrice}</b><small style="text-transform:none; letter-spacing:0; font-size:11px; color:var(--ink-500); margin-top:2px;">per person</small></div>
+        <span class="trek-card-link">View details
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </span>
+      </div>
+    </div>`;
+  card.addEventListener('click', () => openModal(t.id));
+  grid.appendChild(card);
+});
+
+/* ============ FILTERS ============ */
+let activeDiff = 'all', activeLen = 'all';
+document.querySelectorAll('.filter-chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    const type = chip.dataset.filterType;
+    document.querySelectorAll(`.filter-chip[data-filter-type="${type}"]`).forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    if (type === 'difficulty') activeDiff = chip.dataset.filter;
+    else activeLen = chip.dataset.filter;
+    applyFilters();
+  });
+});
+function applyFilters() {
+  document.querySelectorAll('.trek-card').forEach(card => {
+    const diffOk = activeDiff === 'all' || card.dataset.difficulty === activeDiff;
+    const lenOk = activeLen === 'all' || card.dataset.length === activeLen;
+    card.classList.toggle('is-hidden', !(diffOk && lenOk));
+  });
+}
+
+/* ============ DETAIL VIEW ============ */
+const modalRoot = document.getElementById('modalRoot');
+
+const HL_ICONS = {
+  sunrise: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="14" r="4"/><path d="M12 4v3M4.9 6.9l2.1 2.1M2 14h3M19 14h3M17 9l2.1-2.1M2 20h20"/></svg>',
+  forest: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L6 11h3l-3 5h3l-3 4h12l-3-4h3l-3-5h3z"/></svg>',
+  culture: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21V11l9-7 9 7v10"/><path d="M9 21V13h6v8"/></svg>',
+  safe: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 3v6c0 4.5-3.4 8.5-8 9-4.6-.5-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>',
+  family: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="9" r="2"/><path d="M3 21v-2a4 4 0 014-4h4a4 4 0 014 4v2M15 21v-1a3 3 0 013-3h1a3 3 0 013 3v1"/></svg>',
+  quiet: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h18M3 6h12M3 18h8"/></svg>',
+  wildlife: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="13" r="6"/><path d="M7 7l-2-3M17 7l2-3M5 11l-3-1M19 11l3-1"/><circle cx="10" cy="13" r=".8" fill="currentColor"/><circle cx="14" cy="13" r=".8" fill="currentColor"/></svg>',
+  lake: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 16c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0M3 20c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0"/><path d="M8 10l4-6 4 6"/></svg>',
+  pass: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 20l6-10 4 6 4-4 4 8z"/><circle cx="9" cy="6" r="1.5"/></svg>',
+  nature: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21v-7M8 14a4 4 0 014-4 4 4 0 014 4M5 21h14"/><path d="M12 10c2-3 1-6-1-7-2 1-3 4-1 7"/></svg>',
+  vista: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 18l5-7 4 5 4-3 5 5z"/><circle cx="17" cy="6" r="2"/></svg>',
+  peak: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 20l6-12 5 8 3-4 4 8z"/></svg>',
+  reward: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="9" r="6"/><path d="M9 14l-2 7 5-3 5 3-2-7"/></svg>'
+};
+
+function altProfileSvg(days_data, totalDays) {
+  const W = 1000, H = 220, P = 36;
+  const pts = days_data.map((d,i) => ({ x: P + (i * (W - P*2) / Math.max(1, days_data.length-1)), alt: d.alt, label: d.day }));
+  const maxAlt = Math.max(...pts.map(p=>p.alt), 1500);
+  const minAlt = 0;
+  const yFor = a => H - 32 - ((a - minAlt) / (maxAlt - minAlt)) * (H - 70);
+  const path = pts.map((p,i) => `${i===0?'M':'L'} ${p.x} ${yFor(p.alt)}`).join(' ');
+  const area = `M ${pts[0].x} ${H-32} L ` + pts.map(p=>`${p.x} ${yFor(p.alt)}`).join(' L ') + ` L ${pts[pts.length-1].x} ${H-32} Z`;
+  const tickAlts = [0, 2000, 4000, maxAlt > 5000 ? 6000 : 5000];
+  const grid = tickAlts.map(a => `<line class="alt-grid-line" x1="${P}" y1="${yFor(a)}" x2="${W-12}" y2="${yFor(a)}"/><text class="alt-axis-label" x="${P-6}" y="${yFor(a)+3}" text-anchor="end">${a.toLocaleString()}m</text>`).join('');
+  const dots = pts.map(p => `<circle cx="${p.x}" cy="${yFor(p.alt)}" r="3.5" fill="#0f4538"/>`).join('');
+  const peakIdx = pts.reduce((m,p,i)=>p.alt>pts[m].alt?i:m, 0);
+  const peak = pts[peakIdx];
+  const peakLabel = `<g transform="translate(${peak.x},${yFor(peak.alt)-14})"><rect x="-30" y="-16" width="60" height="18" rx="9" fill="#0f4538"/><text x="0" y="-3" text-anchor="middle" fill="#fdfaf3" font-family="DM Sans, sans-serif" font-size="11" font-weight="600">${peak.alt.toLocaleString()}m</text></g>`;
+  return `<svg class="alt-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">
+    <defs><linearGradient id="altFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#1a5d4a" stop-opacity="0.28"/><stop offset="100%" stop-color="#1a5d4a" stop-opacity="0.02"/></linearGradient></defs>
+    ${grid}
+    <path d="${area}" fill="url(#altFill)"/>
+    <path d="${path}" fill="none" stroke="#0f4538" stroke-width="2.5" stroke-linejoin="round"/>
+    ${dots}${peakLabel}
+  </svg>`;
+}
+
+function openModal(id, opts={}) {
+  const t = TREKS.find(x => x.id === id);
+  if (!t) return;
+  const waMsg = encodeURIComponent(`Hi, I'm interested in the ${t.name} trek. Could you share available dates?`);
+
+  const highlightsHtml = t.highlights.map(([text, tag]) => `
+    <li class="hl-card">
+      <div class="hl-icon">${HL_ICONS[tag] || HL_ICONS.peak}</div>
+      <div class="hl-text">${text}</div>
+    </li>`).join('');
+
+  const itineraryHtml = t.days_data.map(d => `
+    <div class="day-card">
+      <div class="day-num-block">
+        <span class="label">Day</span>
+        <span class="num">${String(d.day).padStart(2,'0')}</span>
+      </div>
+      <div class="day-content">
+        <h6>${d.route}</h6>
+        <div class="day-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>${d.time}</div>
+        <p>${d.desc}</p>
+        <div class="day-tags">${(d.tags||[]).map(tg => `<span class="day-tag">${tg}</span>`).join('')}</div>
+      </div>
+      <div class="day-altitude">
+        <span class="alt-num">${d.alt.toLocaleString()}m</span>
+        <span class="alt-label">Altitude</span>
+      </div>
+    </div>`).join('');
+
+  const pricingHtml = t.pricing.map(([g, p]) => `<tr><td>${g}</td><td>$${p} <span style="font-size:12px; color:var(--ink-500); font-family:var(--font-body);">/person</span></td></tr>`).join('');
+  const incHtml = INCLUDED.map(x => `<li>${x}</li>`).join('');
+  const notIncHtml = NOT_INCLUDED.map(x => `<li>${x}</li>`).join('');
+
+  // You might also like — pick 3 other treks
+  const others = TREKS.filter(x => x.id !== t.id).slice(0, 3);
+  // Smarter: pick treks of similar or adjacent difficulty
+  const diffOrder = ['easy','moderate','challenging','strenuous'];
+  const myIdx = diffOrder.indexOf(t.diffKey);
+  const sortedOthers = TREKS.filter(x => x.id !== t.id).sort((a,b) => {
+    return Math.abs(diffOrder.indexOf(a.diffKey)-myIdx) - Math.abs(diffOrder.indexOf(b.diffKey)-myIdx);
+  }).slice(0, 3);
+  const alsoHtml = sortedOthers.map(o => `
+    <article class="also-card" data-id="${o.id}">
+      <div class="also-card-img"><img loading="lazy" src="${o.image}" alt="${o.name}"></div>
+      <div class="also-card-body">
+        <div class="also-meta">${o.region}</div>
+        <h6>${o.name}</h6>
+        <div class="also-foot">
+          <span>${o.days} days · ${o.difficulty}</span>
+          <span class="also-price">From $${o.fromPrice}</span>
+        </div>
+      </div>
+    </article>`).join('');
+
+  const altProfile = altProfileSvg(t.days_data, t.days);
+
+  modalRoot.innerHTML = `
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-back" id="modalCloseBtn" aria-label="Back to all treks">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        Back
+      </button>
+      <button class="modal-close" id="modalCloseBtn2" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6l-12 12"/></svg>
+      </button>
+
+      <div class="modal-hero">
+        <img src="${t.image}" alt="${t.name}">
+        <div class="modal-hero-text">
+          <span class="modal-hero-eyebrow">${t.region}</span>
+          <h2 id="modalTitle">${t.name}</h2>
+          <div class="modal-hero-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>${t.days} days</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 20l5-9 4 6 3-4 6 7H3z"/></svg>Max ${t.altitude}</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 3v6c0 4.5-3.4 8.5-8 9-4.6-.5-8-4.5-8-9V6z"/></svg>${t.difficulty}</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9a4 4 0 000 8h6a4 4 0 010 8H6"/></svg>From $${t.fromPrice}/person</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-body">
+
+        <div class="modal-section">
+          <h4>Overview</h4>
+          <p class="modal-overview">${t.overview}</p>
+          ${t.overview2 ? `<p class="modal-overview">${t.overview2}</p>` : ''}
+          ${t.overview3 ? `<p class="modal-overview">${t.overview3}</p>` : ''}
+        </div>
+
+        <div class="modal-section">
+          <h4>Key highlights</h4>
+          <ul class="hl-grid">${highlightsHtml}</ul>
+        </div>
+
+        <div class="modal-section">
+          <h4>Altitude profile</h4>
+          <div class="alt-profile">
+            <div class="alt-profile-header">
+              <h5>Daily altitude across ${t.days} days</h5>
+              <span>Peak: ${t.altitude}</span>
+            </div>
+            ${altProfile}
+          </div>
+        </div>
+
+        <div class="modal-section">
+          <h4>Day-by-day itinerary</h4>
+          <div class="itinerary">${itineraryHtml}</div>
+        </div>
+
+        <div class="modal-section">
+          <h4>Pricing</h4>
+          <table class="price-table">
+            <thead><tr><th>Group size</th><th style="text-align:right;">Price</th></tr></thead>
+            <tbody>${pricingHtml}</tbody>
+          </table>
+          <p style="font-size:13px; color:var(--ink-500); margin-top:12px;">Best season: ${t.season}</p>
+        </div>
+
+        <div class="modal-section">
+          <h4>What's included</h4>
+          <div class="inc-grid">
+            <div class="inc-col in">
+              <h5>Included</h5>
+              <ul class="inc-list">${incHtml}</ul>
+            </div>
+            <div class="inc-col out">
+              <h5>Not included</h5>
+              <ul class="inc-list">${notIncHtml}</ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-cta-band">
+          <h3>Ready to walk the ${t.name.split('+')[0].trim()}?</h3>
+          <p>Message me directly on WhatsApp — I'll answer within a few hours, share available dates, and answer any questions about fitness, gear, or itinerary tweaks.</p>
+          <div class="btn-row">
+            <a class="btn btn-primary" target="_blank" rel="noopener" href="https://wa.me/9779851353347?text=${waMsg}">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20.5 3.5A11 11 0 0 0 3.4 17.6L2 22l4.6-1.3A11 11 0 1 0 20.5 3.5z"/></svg>
+              Book this trek on WhatsApp
+            </a>
+            <a class="btn btn-ghost" style="color:var(--cream-50); border-color:rgba(253,250,243,0.4);" href="mailto:magicbeyondhimalaya@gmail.com?subject=Inquiry: ${encodeURIComponent(t.name)}">Email instead</a>
+          </div>
+        </div>
+      </div>
+
+      <section class="also-like">
+        <h4>You might also like</h4>
+        <div class="also-like-grid">${alsoHtml}</div>
+      </section>
+    </div>`;
+
+  modalRoot.classList.add('open');
+  modalRoot.setAttribute('aria-hidden','false');
+  document.body.classList.add('locked');
+  modalRoot.scrollTop = 0;
+  document.getElementById('modalCloseBtn').addEventListener('click', closeModal);
+  document.getElementById('modalCloseBtn2').addEventListener('click', closeModal);
+  modalRoot.querySelectorAll('.also-card').forEach(c => {
+    c.addEventListener('click', () => { closeModal(true); setTimeout(() => openModal(c.dataset.id), 320); });
+  });
+  document.addEventListener('keydown', escClose);
+}
+function escClose(e) { if (e.key === 'Escape') closeModal(); }
+function closeModal(quick) {
+  modalRoot.classList.remove('open');
+  modalRoot.setAttribute('aria-hidden','true');
+  if (!quick) document.body.classList.remove('locked');
+  setTimeout(() => { modalRoot.innerHTML = ''; if (quick) document.body.classList.add('locked'); }, 280);
+  document.removeEventListener('keydown', escClose);
+}
+
+/* ============ FAQ ============ */
+const faqList = document.getElementById('faqList');
+FAQS.forEach(([q,a], i) => {
+  const item = document.createElement('div');
+  item.className = 'faq-item reveal';
+  item.style.transitionDelay = (i * 50) + 'ms';
+  item.innerHTML = `
+    <button class="faq-q" aria-expanded="false">
+      <span>${q}</span>
+      <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span>
+    </button>
+    <div class="faq-a"><div class="faq-a-inner">${a}</div></div>`;
+  const btn = item.querySelector('.faq-q');
+  const ans = item.querySelector('.faq-a');
+  btn.addEventListener('click', () => {
+    const opening = !item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(x => {
+      x.classList.remove('open');
+      x.querySelector('.faq-q').setAttribute('aria-expanded','false');
+      x.querySelector('.faq-a').style.maxHeight = '0px';
+    });
+    if (opening) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded','true');
+      ans.style.maxHeight = ans.scrollHeight + 'px';
+    }
+  });
+  faqList.appendChild(item);
+});
+
+/* ============ NAV scroll & mobile menu ============ */
+const nav = document.getElementById('nav');
+const navLinks = document.getElementById('navLinks');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+document.getElementById('navBurger').addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+/* ============ Reveal ============ */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
