@@ -21,6 +21,7 @@
   --amber-600: #b56f1a;
   --amber-500: #c8842b;
   --amber-400: #dba24a;
+  --amber-300: #efc079;
   --cream-50:  #faf6ef;
   --cream-100: #f3ece0;
   --cream-200: #e8ddc8;
@@ -222,7 +223,11 @@ p { margin: 0; text-wrap: pretty; }
   content: "";
   position: absolute; inset: 0;
   background:
-    linear-gradient(180deg, rgba(20,48,45,0.45) 0%, rgba(20,48,45,0.15) 35%, rgba(20,48,45,0.65) 100%);
+    radial-gradient(100% 125% at 0% 72%,
+      rgba(8,24,22,0.92) 0%, rgba(8,24,22,0.74) 40%, rgba(8,24,22,0) 74%),
+    linear-gradient(180deg,
+      rgba(20,48,45,0.45) 0%, rgba(20,48,45,0.12) 26%,
+      rgba(20,48,45,0.38) 70%, rgba(20,48,45,0.66) 100%);
 }
 .hero-inner {
   position: relative; z-index: 1;
@@ -243,7 +248,7 @@ p { margin: 0; text-wrap: pretty; }
 }
 .hero h1 em {
   font-style: italic;
-  color: var(--amber-400);
+  color: var(--amber-300);
 }
 .hero-tagline {
   font-family: var(--font-display);
@@ -297,11 +302,19 @@ p { margin: 0; text-wrap: pretty; }
   letter-spacing: 0;
   text-transform: none;
   line-height: 1;
-  color: var(--amber-400);
+  color: var(--amber-300);
 }
 @media (max-width: 720px) {
   .hero-inner { grid-template-columns: 1fr; }
   .hero-meta { text-align: left; }
+  /* the copy runs full width here, so the scrim has to rise from the foot
+     of the frame rather than hug the left edge */
+  .hero-bg::after {
+    background:
+      linear-gradient(180deg,
+        rgba(20,48,45,0.58) 0%, rgba(8,24,22,0.36) 16%,
+        rgba(8,24,22,0.74) 56%, rgba(8,24,22,0.90) 100%);
+  }
 }
 
 .hero-scroll {
@@ -1343,7 +1356,7 @@ body.locked { overflow: hidden; }
   <div class="hero-bg" role="img" aria-label="Snow-dusted village beneath Mt Manaslu"></div>
   <div class="hero-inner">
     <div>
-      <p class="eyebrow" style="color:var(--amber-400);">Local Nepali guides · Since 2017</p>
+      <p class="eyebrow" style="color:var(--amber-300);">Local Nepali guides · Since 2017</p>
       <h1>Every step <em>tells a story</em>.</h1>
       <p class="hero-tagline">Guided treks through Nepal's most breathtaking landscapes.</p>
       <p class="hero-sub">I'm Sandip — a local guide raised in the foothills of these mountains. We craft small-group treks that connect you with the people, traditions, and scenery that make the Himalaya unforgettable.</p>
