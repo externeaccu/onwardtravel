@@ -12,8 +12,9 @@ deployed by dragging the folder onto Netlify, with no build step.
 
 ## Photography
 
-`index.html` references these files in `images/`. They are not in the
-repository yet and the site will show broken images until they are added:
+The six trek photos live in `images/`. They were resized to a longest edge of
+1920 pixels and re-encoded as progressive JPEG at quality 78, taking the set
+from 10.3 MB to 2.6 MB. Full-resolution originals are held by the client.
 
 | File | Used for |
 |---|---|
@@ -22,8 +23,11 @@ repository yet and the site will show broken images until they are added:
 | `forest-ridge.jpeg` | trek card |
 | `prayer-flags.jpeg` | trek card |
 | `trail-village.jpeg` | trek card |
-| `summit-pose.jpeg` | testimonial / about |
-| `sandip.jpg` | portrait of Sandip |
+| `summit-pose.jpeg` | testimonials and about |
+
+The guide card in the about section still shows a drawn avatar placeholder
+rather than a photograph. To use a real portrait, add `images/sandip.jpg` and
+replace that placeholder markup with an `img` element.
 
 ## Deploying
 
