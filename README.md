@@ -32,5 +32,9 @@ framing ever needs to change.
 
 ## Deploying
 
-Drag the repository folder onto Netlify, or point any static host at the
-repository root. `index.html` is the entry point.
+`index.html` is the entry point and every asset path is relative, so the site
+works at a domain root or under a subpath with no changes.
+
+Published with GitHub Pages, serving from the repository root. `CNAME` holds
+the custom domain, so enabling Pages picks it up automatically. Any static
+host works equally well: drag the folder onto Netlify and it runs as-is.
