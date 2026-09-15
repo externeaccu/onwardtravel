@@ -1437,7 +1437,7 @@ body.locked { overflow: hidden; }
     <div class="stats reveal">
       <div><div class="stat-num">2017</div><div class="stat-label">Founded</div></div>
       <div><div class="stat-num">100%</div><div class="stat-label">Local Nepali guides</div></div>
-      <div><div class="stat-num">6</div><div class="stat-label">Signature treks</div></div>
+      <div><div class="stat-num">7</div><div class="stat-label">Signature treks</div></div>
       <div><div class="stat-num">All</div><div class="stat-label">Permits included</div></div>
     </div>
   </div>
@@ -1449,7 +1449,7 @@ body.locked { overflow: hidden; }
     <div class="treks-head reveal">
       <div>
         <p class="eyebrow">Our treks</p>
-        <h2 class="section-title">Six routes. One promise: every step matters.</h2>
+        <h2 class="section-title">Seven routes. One promise: every step matters.</h2>
         <p class="section-lede">From a four-day window into the Annapurna foothills to an eighteen-day passage across the Manaslu Circuit. Tap any trek for the day-by-day, what's included, and pricing.</p>
       </div>
     </div>
@@ -1673,6 +1673,47 @@ const TREKS = [
         tags:['Gurung village','Cultural museum','Traditional architecture'] }
     ],
     pricing: [['1 pax', 300],['2 pax', 225],['4 pax', 200],['6 pax', 180],['8 pax', 165],['9+ pax', 150]]
+  },
+  {
+    id: 'mardi-himal',
+    name: 'Mardi Himal',
+    region: 'Annapurna · Mardi Ridge',
+    days: 5,
+    difficulty: 'Moderate',
+    diffKey: 'moderate',
+    altitude: '4,500 m (Mardi Himal Base Camp)',
+    fromPrice: 160,
+    season: 'Spring (Mar–May) · Autumn (Sep–Nov)',
+    // REPLACE: needs a real Mardi Himal photo — this one is borrowed from another trek
+    image: 'images/sunrise-peak.jpeg',
+    overview: "A short, quiet ridge walk in the Annapurna region, finishing at Mardi Himal Base Camp at 4,500 m. The trail climbs out of rhododendron and oak forest onto a narrow ridge, with Machhapuchhre, Mardi Himal, Annapurna South and Hiunchuli close enough to feel like they are leaning over you.",
+    overview2: "Mardi Himal runs alongside the Annapurna Base Camp trail but draws a fraction of the traffic. You walk whole afternoons through forest without meeting anyone, sleep in teahouses run by Gurung and Magar families, and climb each day onto a ridge that keeps opening out. The final morning is the payoff — a long, steady push toward Base Camp with the Fishtail summit filling the sky ahead of you.",
+    overview3: "Five days from Pokhara and back, with no technical ground anywhere on the route. You should be comfortable walking four to eight hours a day on steep trail. The hardest sections are the climb to High Camp and the early start toward Base Camp. It suits a first Himalayan trek as well as it suits someone with only a week to spend.",
+    highlights: [
+      ['Machhapuchhre, Mardi Himal and Annapurna South up close','vista'],
+      ['A ridge route with far fewer trekkers than ABC','quiet'],
+      ['Rhododendron and oak forest giving way to alpine meadow','forest'],
+      ['Gurung and Magar teahouse hospitality','culture'],
+      ['Five days from Pokhara — short enough for a tight trip','reward']
+    ],
+    days_data: [
+      { day:1, route:'Pokhara → Kande → Forest Camp', alt:2600, time:'5–7 hrs',
+        desc:"An hour's drive from Pokhara to Kande, then straight into the climb. The trail works up through rhododendron and oak forest, with the Annapurna range showing through gaps in the canopy. Forest Camp sits in deep woodland — quiet, green, and a long way from the crowds on the main Annapurna trails.",
+        tags:['Drive from Pokhara','Rhododendron forest','Steady climb'] },
+      { day:2, route:'Forest Camp → Badal Danda', alt:3210, time:'5–6 hrs',
+        desc:"A steeper day through the Annapurna Conservation Area. The forest thins as you gain height and the ridge begins to reveal itself. Badal Danda is a high shoulder with views in every direction — a good place to sit out the late afternoon and watch the light move across the peaks.",
+        tags:['Conservation area','Forest to ridge','Panoramic views'] },
+      { day:3, route:'Badal Danda → High Camp', alt:3550, time:'3–4 hrs',
+        desc:"A short day, and a welcome one. The trail leaves the treeline for alpine meadow, the peaks sharpening the higher you go. High Camp is the launching point for Base Camp, so the afternoon is for resting, acclimatising, and watching the sun go down over Machhapuchhre.",
+        tags:['Short day','Alpine meadow','Acclimatisation'] },
+      { day:4, route:'High Camp → Mardi Himal Base Camp (4,500m) → Low Camp', alt:3150, time:'7–9 hrs',
+        desc:"The big day. A long climb along the ridge to Mardi Himal Base Camp at 4,500 m, with Mardi Himal and the surrounding peaks laid out around you. Time at the top to take it in, then a long descent through changing landscape all the way down to Low Camp.",
+        tags:['Base camp 4,500 m','Ridge walk','Long descent'] },
+      { day:5, route:'Low Camp → Sidding → Pokhara', alt:850, time:'5–6 hrs',
+        desc:"Down through villages and terraced fields on a completely different side of the mountain. Your driver meets you at Sidding for the road back to Pokhara.",
+        tags:['Village descent','Terraced fields','Drive to Pokhara'] }
+    ],
+    pricing: [['1 pax', 325],['2 pax', 250],['4 pax', 225],['6 pax', 200],['8 pax', 175],['9+ pax', 160]]
   },
   {
     id: 'langtang',
