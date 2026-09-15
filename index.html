@@ -1437,7 +1437,7 @@ body.locked { overflow: hidden; }
     <div class="stats reveal">
       <div><div class="stat-num">2017</div><div class="stat-label">Founded</div></div>
       <div><div class="stat-num">100%</div><div class="stat-label">Local Nepali guides</div></div>
-      <div><div class="stat-num">7</div><div class="stat-label">Signature treks</div></div>
+      <div><div class="stat-num">8</div><div class="stat-label">Signature treks</div></div>
       <div><div class="stat-num">All</div><div class="stat-label">Permits included</div></div>
     </div>
   </div>
@@ -1449,7 +1449,7 @@ body.locked { overflow: hidden; }
     <div class="treks-head reveal">
       <div>
         <p class="eyebrow">Our treks</p>
-        <h2 class="section-title">Seven routes. One promise: every step matters.</h2>
+        <h2 class="section-title">Eight routes. One promise: every step matters.</h2>
         <p class="section-lede">From a four-day window into the Annapurna foothills to an eighteen-day passage across the Manaslu Circuit. Tap any trek for the day-by-day, what's included, and pricing.</p>
       </div>
     </div>
@@ -1869,6 +1869,68 @@ const TREKS = [
     pricing: [['1 pax', 400],['2 pax', 280],['4 pax', 230],['6 pax', 200],['8 pax', 185],['9+ pax', 170]]
   },
   {
+    id: 'manaslu-circuit',
+    name: 'Manaslu Circuit',
+    region: 'Manaslu · Budhi Gandaki',
+    days: 12,
+    difficulty: 'Challenging to Strenuous',
+    diffKey: 'challenging',
+    altitude: '5,106 m (Larkya La Pass)',
+    fromPrice: 390,
+    season: 'Spring (Mar–May) · Autumn (Sep–Nov)',
+    // REPLACE: needs a photo of its own — currently shared with the Tsum Valley trek
+    image: 'images/manaslu-village.jpeg',
+    overview: "A twelve-day circuit of Manaslu (8,163 m), the world's eighth-highest mountain, following the Budhi Gandaki river from subtropical gorge to high alpine crossing. The route climbs through Tibetan-influenced villages past monasteries, chortens and mani walls, and finishes over the Larkya La Pass at 5,106 m.",
+    overview2: "This is the Manaslu Circuit without the Tsum Valley detour — the same great walk, six days shorter. You follow the river up through forest, waterfall and suspension bridge, and the valley narrows around you day by day until the trees give out and the landscape turns barren and Tibetan in character. Samagaun, the largest settlement in the upper valley, earns its acclimatisation day: Birendra Lake and the Manaslu Base Camp trail both start from the doorstep.",
+    overview3: "The Larkya La crossing is the hard part and the reason people come. You start very early, climb for hours in thin air, then drop a long way to Bimthang on the far side — eight to ten hours in all. Expect cold, wind and possibly snow at the pass. The route is genuinely remote, facilities thin out in the upper valley, and the roads at either end are rough.",
+    highlights: [
+      ['Larkya La Pass at 5,106 m','pass'],
+      ['Manaslu (8,163 m) seen close up','peak'],
+      ['Tibetan-influenced villages, monasteries and mani walls','culture'],
+      ['Subtropical gorge to glacier on one route','nature'],
+      ['Birendra Lake and Manaslu Base Camp from Samagaun','lake']
+    ],
+    days_data: [
+      { day:1, route:'Kathmandu → Machha Khola', alt:900, time:'',
+        desc:"Drive out through Dhading, Arughat and Soti Khola, following the Budhi Gandaki valley to the trailhead. The road gets rougher the closer you get.",
+        tags:['Long drive','Budhi Gandaki valley','Rough road'] },
+      { day:2, route:'Machha Khola → Jagat', alt:1340, time:'',
+        desc:"Walking starts, beside the river. Suspension bridges, waterfalls, forest and small settlements all the way to Jagat.",
+        tags:['River trail','Suspension bridges','Waterfalls'] },
+      { day:3, route:'Jagat → Deng', alt:1860, time:'',
+        desc:"On through the gorge past Philim and forested hillside. The valley tightens and turns more mountainous as you approach Deng.",
+        tags:['Deep gorge','Philim','Forest'] },
+      { day:4, route:'Deng → Namrung', alt:2630, time:'',
+        desc:"The landscape shifts noticeably with the height gained. More forest, waterfalls and bridges before Namrung, the gateway into the upper Manaslu region.",
+        tags:['Gateway village','Height gain','Changing landscape'] },
+      { day:5, route:'Namrung → Shyala', alt:3500, time:'',
+        desc:"The trail climbs into properly alpine country, with Manaslu, Manaslu North and Himalchuli opening up around you.",
+        tags:['Alpine scenery','Manaslu views','Himalchuli'] },
+      { day:6, route:'Shyala → Samagaun', alt:3530, time:'',
+        desc:"A short, spectacular walk through alpine landscape to Samagaun, the largest settlement in the upper valley.",
+        tags:['Short day','Samagaun','Upper valley'] },
+      { day:7, route:'Acclimatisation at Samagaun', alt:3530, time:'',
+        desc:"A day to let your body catch up before going higher. Options include Pungen Gompa, Manaslu Base Camp, Birendra Lake, or the monasteries and viewpoints nearby.",
+        tags:['Acclimatisation','Birendra Lake','Base Camp option'] },
+      { day:8, route:'Samagaun → Samdo', alt:3860, time:'',
+        desc:"Leave the main valley and climb gradually to Samdo, close to the Tibetan border. The country here is bare and Tibetan in feel.",
+        tags:['Tibetan border','Barren country','Gradual climb'] },
+      { day:9, route:'Samdo → Dharamsala (Larkya Phedi)', alt:4460, time:'',
+        desc:"Short on distance, serious on altitude. Follow the Larkya river up to Dharamsala and sort your kit and clothing for the pass in the morning.",
+        tags:['Altitude gain','Larkya Phedi','Pass preparation'] },
+      { day:10, route:'Dharamsala → Larkya La (5,106m) → Bimthang', alt:3700, time:'8–10 hrs',
+        desc:"The biggest day of the trek. A very early start and a long climb to Larkya La at 5,106 m, with the surrounding Himalayan peaks laid out from the top, then a long descent to Bimthang.",
+        tags:['Larkya La 5,106 m','Pre-dawn start','Long descent'] },
+      { day:11, route:'Bimthang → Tilije / Dharapani', alt:1900, time:'',
+        desc:"A dramatic drop out of the high alpine into forest and lower valley, joining the route across to the Annapurna region.",
+        tags:['Steep descent','Forest','Annapurna link'] },
+      { day:12, route:'Tilije / Dharapani → Kathmandu or Pokhara', alt:1400, time:'',
+        desc:"Jeep to Besisahar and on by road to Kathmandu or Pokhara, whichever suits your onward plans.",
+        tags:['Jeep transfer','Besisahar','Trek complete'] }
+    ],
+    pricing: [['1 pax', 680],['2 pax', 550],['4 pax', 500],['6 pax', 450],['8 pax', 420],['9+ pax', 390]]
+  },
+  {
     id: 'manaslu-tsum',
     name: 'Manaslu + Tsum Valley',
     region: 'Manaslu · Remote Himalaya',
@@ -2186,7 +2248,7 @@ function openModal(id, opts={}) {
       </div>
       <div class="day-content">
         <h6>${d.route}</h6>
-        <div class="day-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>${d.time}</div>
+        ${d.time ? `<div class="day-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>${d.time}</div>` : ''}
         <p>${d.desc}</p>
         <div class="day-tags">${(d.tags||[]).map(tg => `<span class="day-tag">${tg}</span>`).join('')}</div>
       </div>
