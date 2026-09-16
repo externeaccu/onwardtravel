@@ -922,6 +922,26 @@ p { margin: 0; text-wrap: pretty; }
   text-transform: uppercase;
 }
 .price-table tr:last-child td { border-bottom: none; }
+.addon-title {
+  margin: 26px 0 12px;
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--ink-500);
+}
+.addon-list { display: flex; flex-direction: column; gap: 10px; }
+.addon {
+  padding: 12px 14px;
+  background: var(--cream-100);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+}
+.addon-head {
+  display: flex; flex-wrap: wrap; gap: 4px 12px;
+  align-items: baseline; justify-content: space-between;
+}
+.addon-name { font-weight: 600; color: var(--ink-800); }
+.addon-price { font-weight: 600; color: var(--green-700); white-space: nowrap; }
+.addon-note { margin: 4px 0 0; font-size: 13px; color: var(--ink-500); }
 .price-table td:last-child {
   font-family: var(--font-display);
   font-size: 18px;
@@ -2094,8 +2114,13 @@ const INCLUDED = [
   'Government taxes and service charges',
   'First-aid kit carried by your guide'
 ];
+const ADDONS = [
+  ['Porter', '$25 per day', 'Carries your main pack. Ask for one when you book.'],
+  ['Meals on the trail', '$25–30 per person per day', 'Paid at teahouses as you go, not to us.'],
+  ['Extra days', 'Priced on request', 'Depends on the route and what you add to it.']
+];
 const NOT_INCLUDED = [
-  'Meals on the trail (purchased at teahouses along the route)',
+  'Meals on the trail — budget $25–30 per person per day, paid at teahouses',
   'Drinks, snacks, bar bills',
   'Hot showers, charging, Wi-Fi, heating at teahouses',
   'Travel insurance — mandatory, must cover high-altitude trekking and evacuation',
@@ -2261,6 +2286,10 @@ function openModal(id, opts={}) {
   const pricingHtml = t.pricing.map(([g, p]) => `<tr><td>${g}</td><td>$${p} <span style="font-size:12px; color:var(--ink-500); font-family:var(--font-body);">/person</span></td></tr>`).join('');
   const incHtml = INCLUDED.map(x => `<li>${x}</li>`).join('');
   const notIncHtml = NOT_INCLUDED.map(x => `<li>${x}</li>`).join('');
+  const addonsHtml = ADDONS.map(([name, price, note]) => `<div class="addon">
+      <div class="addon-head"><span class="addon-name">${name}</span><span class="addon-price">${price}</span></div>
+      <p class="addon-note">${note}</p>
+    </div>`).join('');
 
   // You might also like — pick 3 other treks
   const others = TREKS.filter(x => x.id !== t.id).slice(0, 3);
@@ -2346,6 +2375,9 @@ function openModal(id, opts={}) {
             <tbody>${pricingHtml}</tbody>
           </table>
           <p style="font-size:13px; color:var(--ink-500); margin-top:12px;">Best season: ${t.season}</p>
+
+          <h5 class="addon-title">Budget for these on top</h5>
+          <div class="addon-list">${addonsHtml}</div>
         </div>
 
         <div class="modal-section">
