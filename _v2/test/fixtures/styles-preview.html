@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>styles.css preview (not published)</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<link rel="stylesheet" href="../../styles.css">
+<script>
+  // Scratch-only: ?theme=dark|light forces a theme; ?sheet=1 opens the sheet; ?admin=1 shows admin chrome.
+  (function(){var q=new URLSearchParams(location.search);var t=q.get('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);})();
+</script>
+<style>
+  /* preview-only labels */
+  .pv{font:11px/1 monospace;color:#888;letter-spacing:.08em;text-transform:uppercase;padding:24px 0 8px;border-top:1px dashed #bbb;margin-top:32px}
+</style>
+</head>
+<body>
+
+<header id="topbar" class="topbar" role="banner">
+  <div class="topbar__inner">
+    <a class="topbar__brand" href="#home">
+      <span class="topbar__wordmark">Magic Beyond Himalaya</span>
+      <svg class="topbar__thread thread is-drawn" viewBox="0 0 200 6" preserveAspectRatio="none" aria-hidden="true"><path class="thread__line" d="M1 4 L40 3 L70 1.5 L110 4 L150 2 L199 3.5"/></svg>
+    </a>
+    <nav class="topbar__nav" aria-label="Sections">
+      <a class="topbar__link is-active" href="#home">Home</a>
+      <a class="topbar__link" href="#agenda">Dates</a>
+      <a class="topbar__link" href="#treks">Treks</a>
+      <a class="topbar__link" href="#my-trips">My trips</a>
+      <a class="topbar__link" href="#about">About</a>
+    </nav>
+    <div class="topbar__actions">
+      <button class="iconbtn iconbtn--wa" aria-label="Ask on WhatsApp"><svg viewBox="0 0 24 24"><path d="M4 20l1.5-4A8 8 0 1 1 8.5 19z"/><path d="M9 10.5c.5 2 2.5 4 4.5 4.5l1.5-1.5 2 1-.5 2c-4 .5-8-3.5-7.5-7.5l2-.5 1 2z"/></svg></button>
+      <button class="iconbtn iconbtn--theme" aria-label="Theme"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="app" class="app">
+<section class="view" id="view">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="container">
+      <h1 class="hero__tagline view__title" tabindex="-1">Every step tells a story.</h1>
+      <p class="hero__note hero__note--live">I’m guiding Manaslu Circuit until 26 Nov, replies may be slow.</p>
+    </div>
+  </div>
+
+  <!-- NEXT DEPARTURES -->
+  <div class="container">
+    <section class="section">
+      <div class="section__head">
+        <span class="section__eyebrow">Next departures</span>
+        <h2 class="section__title">Dates you can join</h2>
+        <a class="section__more" href="#agenda">See all dates →</a>
+      </div>
+      <div class="agenda__list">
+        <a class="dep" href="#departure-poon-hill-20261010">
+          <div class="dep__date"><span class="dep__day tnum">10</span><span class="dep__wd">Sat · Oct</span></div>
+          <div class="dep__body">
+            <div class="dep__trek">Ghorepani Poon Hill</div>
+            <div class="dep__meta">4 days · ends Tue 13 Oct</div>
+            <div class="dep__cap"><div class="dep__cap-fill" style="width:37.5%"></div></div>
+          </div>
+          <div class="dep__right"><span class="dep__price tnum">$165 pp</span><span class="pill spots spots--plenty tnum">5 of 8 spots left</span></div>
+        </a>
+        <a class="dep" href="#departure-mardi-himal-20261016">
+          <div class="dep__date"><span class="dep__day tnum">16</span><span class="dep__wd">Fri · Oct</span></div>
+          <div class="dep__body">
+            <div class="dep__trek">Mardi Himal</div>
+            <div class="dep__meta">5 days · ends Tue 20 Oct</div>
+            <div class="dep__cap"><div class="dep__cap-fill" style="width:75%"></div></div>
+            <div class="dep__note">Group meets in Pokhara the evening before the start.</div>
+          </div>
+          <div class="dep__right"><span class="dep__price tnum">$175 pp</span><span class="pill spots spots--few tnum">2 left</span></div>
+        </a>
+        <a class="dep dep--full" href="#departure-annapurna-tilicho-20261101">
+          <div class="dep__date"><span class="dep__day tnum">1</span><span class="dep__wd">Sun · Nov</span></div>
+          <div class="dep__body">
+            <div class="dep__trek">Annapurna Circuit + Tilicho Lake</div>
+            <div class="dep__meta">11 days · ends Wed 11 Nov</div>
+            <div class="dep__cap"><div class="dep__cap-fill" style="width:100%"></div></div>
+          </div>
+          <div class="dep__right"><span class="dep__price tnum">$250 pp</span><span class="pill spots spots--full tnum">Full</span></div>
+        </a>
+        <a class="dep dep--dim" href="#departure-ebc-gokyo-20261105">
+          <div class="dep__date"><span class="dep__day tnum">5</span><span class="dep__wd">Thu · Nov</span></div>
+          <div class="dep__body">
+            <div class="dep__trek">Everest Base Camp + Gokyo Lakes</div>
+            <div class="dep__meta">15 days · ends Thu 19 Nov</div>
+            <div class="dep__cap"><div class="dep__cap-fill" style="width:33%"></div></div>
+            <div class="dep__fit">leaves you 2 spare days</div>
+          </div>
+          <div class="dep__right"><span class="dep__price tnum">$600 pp</span><span class="pill spots spots--plenty tnum">4 of 6 spots left</span></div>
+        </a>
+      </div>
+      <p class="note note--stale">Showing dates cached 3 h ago — live availability unavailable</p>
+    </section>
+
+    <!-- TREK LIST -->
+    <section class="section">
+      <div class="section__head">
+        <span class="section__eyebrow">Eight treks</span>
+        <h2 class="section__title">Pick your days</h2>
+      </div>
+      <div class="chips">
+        <button class="chip is-on" data-group="diff">All</button>
+        <button class="chip" data-group="diff">Easy</button>
+        <button class="chip" data-group="diff">Moderate</button>
+        <button class="chip" data-group="diff">Challenging</button>
+        <button class="chip" data-group="diff">Strenuous</button>
+        <button class="chip" data-group="len">≤5 days</button>
+        <button class="chip" data-group="len">6–10</button>
+        <button class="chip" data-group="len">11+</button>
+      </div>
+      <div class="trek-list">
+        <a class="trek-card" href="#trek-poon-hill">
+          <div class="trek-card__num tnum">4<span class="trek-card__num-key">days</span></div>
+          <div class="trek-card__body">
+            <h3 class="trek-card__name">Ghorepani Poon Hill</h3>
+            <div class="trek-card__meta">Annapurna · Foothills · 3,210 m · <span class="diff diff--easy">Easy to Moderate</span></div>
+            <div class="trek-card__next tnum">Next: Sat 10 Oct · 5 spots</div>
+          </div>
+          <svg class="trek-card__spark" viewBox="0 0 100 28" aria-hidden="true"><polyline points="2,24 35,17 68,19 98,25"/></svg>
+          <div class="trek-card__price tnum"><small>from</small><b>$150</b></div>
+          <img class="trek-card__thumb" src="../../images/sunrise-peak.jpeg" alt="Sunrise light on Himalayan peaks" width="72" height="72" loading="lazy">
+        </a>
+        <a class="trek-card" href="#trek-mardi-himal">
+          <div class="trek-card__num tnum">5<span class="trek-card__num-key">days</span></div>
+          <div class="trek-card__body">
+            <h3 class="trek-card__name">Mardi Himal</h3>
+            <div class="trek-card__meta">Annapurna · Ridge walk · 4,500 m · <span class="diff diff--moderate">Moderate</span></div>
+          </div>
+          <svg class="trek-card__spark" viewBox="0 0 100 28" aria-hidden="true"><polyline points="2,20 26,15 50,11 74,8 98,20"/></svg>
+          <div class="trek-card__price tnum"><small>from</small><b>$160</b></div>
+          <img class="trek-card__thumb" src="../../images/forest-ridge.jpeg" alt="Forested ridge trail" width="72" height="72" loading="lazy">
+        </a>
+        <a class="trek-card" href="#trek-ebc-gokyo">
+          <div class="trek-card__num tnum">15<span class="trek-card__num-key">days</span></div>
+          <div class="trek-card__body">
+            <h3 class="trek-card__name">Everest Base Camp + Gokyo Lakes</h3>
+            <div class="trek-card__meta">Khumbu · High passes · 5,555 m · <span class="diff diff--strenuous">Challenging to Strenuous</span></div>
+          </div>
+          <svg class="trek-card__spark" viewBox="0 0 100 28" aria-hidden="true"><polyline points="2,16 10,17 18,14 26,12 34,10 42,8 50,3 58,7 66,6 74,4 82,9 90,14 98,17"/></svg>
+          <div class="trek-card__price tnum"><small>from</small><b>$600</b></div>
+          <img class="trek-card__thumb" src="../../images/prayer-flags.jpeg" alt="Prayer flags on a high pass" width="72" height="72" loading="lazy">
+        </a>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="stat__val tnum">8</div><div class="stat__key">treks</div></div>
+        <div class="stat"><div class="stat__val tnum">5,555 m</div><div class="stat__key">highest point</div></div>
+        <div class="stat"><div class="stat__val tnum">4–18</div><div class="stat__key">days</div></div>
+        <div class="stat"><div class="stat__val tnum">$150+</div><div class="stat__key">per person</div></div>
+      </div>
+    </section>
+
+    <!-- BUTTONS / PILLS -->
+    <p class="pv">buttons · pills</p>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center">
+      <button class="btn btn--primary">Request a spot</button>
+      <button class="btn btn--ghost">See dates</button>
+      <button class="btn btn--dark"><svg class="btn__icon" viewBox="0 0 24 24"><path d="M4 20l1.5-4A8 8 0 1 1 8.5 19z"/></svg>Ask on WhatsApp</button>
+      <button class="btn btn--danger btn--sm">Withdraw</button>
+      <button class="btn btn--link">All questions</button>
+      <button class="btn btn--primary is-busy">Saving</button>
+      <button class="btn btn--ghost" disabled>Disabled</button>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:12px">
+      <span class="pill pill--open">Open</span><span class="pill pill--few">Few</span><span class="pill pill--full">Full</span><span class="pill pill--closed">Closed</span>
+      <span class="pill pill--requested">Requested</span><span class="pill pill--confirmed">Confirmed</span><span class="pill pill--cancelled">Cancelled</span>
+      <span class="pill syncpill syncpill--live">Live</span><span class="pill syncpill syncpill--waiting">2 waiting</span>
+      <span class="chip chip--tag">viewpoint</span>
+    </div>
+    <div class="inline-confirm" style="margin-top:12px"><span class="inline-confirm__q">Withdraw this request?</span><button class="btn btn--danger btn--sm inline-confirm__yes">Withdraw</button><button class="btn btn--ghost btn--sm inline-confirm__no">Keep</button></div>
+    <div class="banner banner--warn" style="margin-top:12px"><span class="banner__text">Edited 3 min ago on another device</span><button class="btn btn--sm btn--ghost banner__action">Reload</button></div>
+    <div class="empty" style="margin-top:12px"><div class="empty__title">Dates are set by Sandip and posted here.</div><div class="empty__body">Ask on WhatsApp for the next one.</div><div class="empty__actions"><a class="btn btn--dark" href="#">Ask on WhatsApp</a></div></div>
+    <div class="skel-group" data-timeout="4000" style="margin-top:12px"><div class="skel skel--text"></div><div class="skel skel--row"></div></div>
+  </div>
+
+  <!-- PROFILE HERO -->
+  <p class="pv container">profile hero</p>
+  <div class="phero">
+    <div class="phero__svg"><div class="elev elev--hero is-drawn"><svg class="elev__svg" viewBox="0 0 390 160" preserveAspectRatio="none" aria-hidden="true">
+      <polygon class="elev__area" points="0,160 0,120 78,60 156,90 195,30 234,55 312,70 390,130 390,160"/>
+      <polyline class="elev__line" points="0,120 78,60 156,90 195,30 234,55 312,70 390,130"/>
+      <circle class="elev__dot" cx="78" cy="60" r="5"/><circle class="elev__dot" cx="156" cy="90" r="5"/><circle class="elev__dot" cx="234" cy="55" r="5"/><circle class="elev__dot" cx="312" cy="70" r="5"/><circle class="elev__dot" cx="390" cy="130" r="5"/>
+      <polygon class="elev__spike" points="195,22 190,32 200,32"/>
+    </svg></div></div>
+    <div class="container">
+      <div class="phero__eyebrow">Annapurna · Ridge walk</div>
+      <h1 class="phero__title">Mardi Himal</h1>
+      <dl class="phero__facts">
+        <div class="phero__fact"><dt class="phero__fact-key">Days</dt><dd>5</dd></div>
+        <div class="phero__fact"><dt class="phero__fact-key">Highest</dt><dd>4,500 m</dd></div>
+        <div class="phero__fact"><dt class="phero__fact-key">Difficulty</dt><dd>Moderate</dd></div>
+        <div class="phero__fact"><dt class="phero__fact-key">Season</dt><dd>Spring · Autumn</dd></div>
+        <div class="phero__fact"><dt class="phero__fact-key">From</dt><dd>$160 pp</dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="intro">
+      <figure class="intro__photo"><img src="../../images/forest-ridge.jpeg" alt="Forested ridge trail" width="280" height="350" loading="lazy"></figure>
+      <div class="intro__text prose">
+        <p>A quieter ridge walk that climbs steadily through rhododendron forest to a high camp with the Annapurna wall filling the sky.</p>
+        <p class="aside">We walk slowly and steadily, every day.</p>
+        <p>Short stages keep the altitude gain gentle; the last morning is an early start for the base camp viewpoint.</p>
+      </div>
+    </div>
+
+    <!-- MAP + PROFILE (static approximation of maps.js output) -->
+    <div class="split">
+      <div class="split__aside">
+        <div class="rmap is-visible">
+          <div class="rmap__stage">
+            <svg class="rmap__svg" viewBox="0 0 358 258" style="aspect-ratio:358/258" role="img" aria-label="Sketch map">
+              <rect class="rmap__paper" width="358" height="258"/>
+              <g class="rmap__grid"><line class="rmap__graticule" x1="60" y1="0" x2="60" y2="258"/><line class="rmap__graticule" x1="180" y1="0" x2="180" y2="258"/><line class="rmap__graticule" x1="300" y1="0" x2="300" y2="258"/><line class="rmap__graticule" x1="0" y1="70" x2="358" y2="70"/><line class="rmap__graticule" x1="0" y1="170" x2="358" y2="170"/></g>
+              <g class="rmap__route">
+                <path class="rmap__halo" d="M60 200 L110 150 L160 110 L200 60 L240 40 L280 100 L300 180"/>
+                <path class="rmap__line rmap__line--travel" d="M20 230 L60 200"/>
+                <path class="rmap__line rmap__line--walk" d="M60 200 L110 150 L160 110 L200 60 L240 40 L280 100 L300 180"/>
+                <path class="rmap__line rmap__line--done" d="M60 200 L110 150 L160 110"/>
+              </g>
+              <g class="rmap__markers">
+                <g class="rmap__marker rmap__marker--start" style="--i:0"><circle class="rmap__dot" cx="60" cy="200" r="11"/><text class="rmap__num" x="60" y="200">1</text><path class="rmap__glyph" d="M72 194 l5 -5 l5 5 v6 h-10z"/></g>
+                <g class="rmap__marker rmap__marker--stop is-dim" style="--i:1"><circle class="rmap__dot" cx="110" cy="150" r="11"/><text class="rmap__num" x="110" y="150">1</text></g>
+                <g class="rmap__marker rmap__marker--stop is-active" style="--i:2"><circle class="rmap__dot" cx="160" cy="110" r="11"/><circle class="rmap__ring2" cx="160" cy="110" r="15"/><text class="rmap__num" x="160" y="110">2</text></g>
+                <g class="rmap__marker rmap__marker--peak" style="--i:3"><polygon class="rmap__tri" points="240,33 234,45 246,45"/></g>
+                <g class="rmap__marker rmap__marker--via" style="--i:4"><circle class="rmap__via" cx="200" cy="60" r="5"/></g>
+                <g class="rmap__marker rmap__marker--end" style="--i:5"><circle class="rmap__dot" cx="300" cy="180" r="11"/><text class="rmap__num" x="300" y="180">5</text></g>
+              </g>
+              <g class="rmap__labels">
+                <text class="rmap__label" x="76" y="204">Kande</text>
+                <text class="rmap__label" x="126" y="154">Forest Camp</text>
+                <text class="rmap__label" x="176" y="114">Badal Danda</text>
+                <text class="rmap__label" x="240" y="24" text-anchor="middle">Mardi Himal BC</text>
+                <text class="rmap__label rmap__label--elev" x="240" y="60" text-anchor="middle">4,500 m</text>
+                <text class="rmap__label" x="316" y="184">Sidding</text>
+              </g>
+              <g class="rmap__scale"><line class="rmap__scale-line" x1="16" y1="230" x2="80" y2="230"/><text class="rmap__scale-text" x="16" y="246">5 km</text></g>
+              <g class="rmap__north" transform="translate(334,28)"><path d="M0 8 L0 -6 M-4 -2 L0 -6 L4 -2"/><text y="22">N</text></g>
+            </svg>
+          </div>
+          <p class="rmap__legend">Sketch map, not for navigation · coordinates approximate</p>
+          <div class="rmap__daycard"><div class="rmap__daycard-title">Day 2 · Forest Camp → Badal Danda</div><div class="rmap__daycard-facts tnum">sleep 3,210 m · 4–5 hrs</div></div>
+          <div class="elev is-drawn"><svg class="elev__svg" viewBox="0 0 358 120" aria-hidden="true">
+            <text class="elev__ylabel" x="30" y="30">4,000</text><text class="elev__ylabel" x="30" y="72">3,000</text><text class="elev__ylabel" x="30" y="98">2,000</text>
+            <line class="elev__guide" x1="36" y1="30" x2="346" y2="30"/><text class="elev__guide-label" x="40" y="26">4,000 m · acclimatisation days above this</text>
+            <polygon class="elev__area" points="36,98 98,70 160,50 222,40 253,14 284,55 346,96 346,98"/>
+            <polyline class="elev__line" points="36,98 98,70 160,50 222,40 253,14 284,55 346,96"/>
+            <line class="elev__hair" x1="160" y1="14" x2="160" y2="98"/>
+            <circle class="elev__dot" cx="98" cy="70" r="5"/><circle class="elev__dot elev__dot--active" cx="160" cy="50" r="6.5"/><circle class="elev__dot" cx="222" cy="40" r="5"/><circle class="elev__dot" cx="284" cy="55" r="5"/><circle class="elev__dot" cx="346" cy="96" r="5"/>
+            <polygon class="elev__spike" points="253,8 248,18 258,18"/>
+            <text class="elev__tick" x="98" y="114">1</text><text class="elev__tick" x="160" y="114">2</text><text class="elev__tick" x="222" y="114">3</text><text class="elev__tick" x="284" y="114">4</text><text class="elev__tick" x="346" y="114">5</text>
+          </svg></div>
+        </div>
+      </div>
+      <div class="split__main">
+        <div class="days">
+          <div class="day" data-day="1">
+            <button class="day__head" aria-expanded="false"><span class="day__num">1</span><span class="day__route">Kande → Forest Camp</span><span class="day__facts tnum">sleep 2,600 m · +830 m · 5–6 hrs</span></button>
+          </div>
+          <div class="day is-open is-active" data-day="2">
+            <button class="day__head" aria-expanded="true"><span class="day__num">2</span><span class="day__route">Forest Camp → Badal Danda</span><span class="day__facts tnum">sleep 3,210 m · +610 m · 4–5 hrs</span></button>
+            <div class="day__body"><p class="day__desc">A steady climb out of the forest onto the open ridge; the first close view of Machhapuchhre.</p><div class="day__tags"><span class="chip chip--tag">ridge</span><span class="chip chip--tag">viewpoint</span></div></div>
+          </div>
+          <div class="day" data-day="3">
+            <button class="day__head" aria-expanded="false"><span class="day__num">3</span><span class="day__route">Badal Danda → High Camp</span><span class="day__facts tnum">sleep 3,550 m · +340 m · 3–4 hrs</span></button>
+          </div>
+          <div class="day" data-day="4">
+            <button class="day__head" aria-expanded="false"><span class="day__num">4</span><span class="day__route">Acclimatisation day at Samagaun</span><span class="day__facts tnum">sleep 3,550 m · <span class="chip chip--tag">rest</span></span></button>
+          </div>
+        </div>
+        <ul class="highlights" style="margin-top:24px">
+          <li>Sunrise over the Annapurna wall from High Camp.</li>
+          <li>Rhododendron forest in bloom in spring.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TIERS -->
+    <p class="pv">price tiers · stepper</p>
+    <div class="tiers__stepper">
+      <div class="stepper" role="group" aria-label="Group size"><button class="stepper__btn" aria-label="Fewer" disabled>−</button><span class="stepper__val tnum">1</span><button class="stepper__btn" aria-label="More">+</button></div>
+      <span class="price-line tnum">$300 per person · <span class="price-line__total">$300 for 1</span></span>
+    </div>
+    <div class="tiers">
+      <div class="tiers__row is-on"><span class="tiers__label">1 pax</span><span class="tiers__price tnum">$300</span></div>
+      <div class="tiers__row"><span class="tiers__label">2 pax</span><span class="tiers__price tnum">$225</span></div>
+      <div class="tiers__row"><span class="tiers__label">3–5 pax</span><span class="tiers__price tnum">$180</span></div>
+      <div class="tiers__row"><span class="tiers__label">6+ pax</span><span class="tiers__price tnum">$150</span></div>
+    </div>
+
+    <!-- INCLUDED COLUMNS -->
+    <div class="cols" style="margin-top:24px">
+      <div class="cols__col"><div class="cols__title">Included</div><ul class="cols__list"><li>Licensed guide (Sandip)</li><li>Teahouse accommodation</li><li>Permits and TIMS card</li></ul></div>
+      <div class="cols__col"><div class="cols__title">Not included</div><ul class="cols__list"><li>International flights</li><li>Travel insurance</li><li>Tips</li></ul></div>
+      <div class="cols__col"><div class="cols__title">Add-ons</div><ul class="cols__list"><li class="addon"><span class="addon__name">Porter</span><span class="addon__price tnum">$25 per day</span><span class="addon__note">Carries your main pack. Ask for one when you book.</span></li><li class="addon"><span class="addon__name">Sleeping bag</span><span class="addon__price tnum">$2 per day</span></li></ul></div>
+    </div>
+
+    <!-- MONTH STRIP + AGENDA -->
+    <p class="pv">agenda</p>
+    <h1 class="view__title">Departures</h1>
+    <p class="hero__note">Scheduled group starts with a fixed price and capacity. A request never holds a spot — Sandip confirms on WhatsApp.</p>
+    <div class="agenda">
+      <div class="agenda__tools">
+        <div class="mstrip is-drawn">
+          <button class="mstrip__chip is-current">Sep<small class="mstrip__year">2026</small></button>
+          <button class="mstrip__chip is-on">Oct<small class="mstrip__year">2026</small><span class="mstrip__dot"></span></button>
+          <button class="mstrip__chip">Nov<small class="mstrip__year">2026</small><span class="mstrip__dot"></span></button>
+          <button class="mstrip__chip is-empty">Dec<small class="mstrip__year">2026</small></button>
+          <button class="mstrip__chip is-empty">Jan<small class="mstrip__year">2027</small></button>
+          <button class="mstrip__chip is-empty">Feb<small class="mstrip__year">2027</small></button>
+          <button class="mstrip__chip">Mar<small class="mstrip__year">2027</small><span class="mstrip__dot"></span></button>
+          <button class="mstrip__chip">Apr<small class="mstrip__year">2027</small><span class="mstrip__dot"></span></button>
+        </div>
+        <details class="fit"><summary class="fit__toggle">Fit my dates</summary><div class="fit__fields field__row"><input class="input input--date" type="date" aria-label="Land"><input class="input input--date" type="date" aria-label="Fly out"></div><button class="btn btn--link fit__clear">Clear</button></details>
+        <div class="chips"><button class="chip is-on">All treks</button><button class="chip">Poon Hill</button><button class="chip">Mardi Himal</button><button class="chip">Langtang</button><button class="chip">Annapurna Base Camp</button></div>
+      </div>
+      <h2 class="agenda__month" id="m-2026-10">October 2026</h2>
+      <div class="agenda__list">
+        <a class="dep" href="#"><div class="dep__date"><span class="dep__day tnum">24</span><span class="dep__wd">Sat · Oct</span></div><div class="dep__body"><div class="dep__trek">Annapurna Base Camp via Poon Hill</div><div class="dep__meta">8 days · ends Sat 31 Oct</div><div class="dep__cap"><div class="dep__cap-fill" style="width:25%"></div></div></div><div class="dep__right"><span class="dep__price tnum">$185 pp</span><span class="pill spots spots--plenty tnum">6 of 8 spots left</span></div></a>
+      </div>
+    </div>
+
+    <!-- DEPARTURE PAGE -->
+    <p class="pv">departure page</p>
+    <div class="depage">
+      <a class="view__back" href="#agenda">← Back</a>
+      <div class="depage__head">
+        <div class="dep__date"><span class="dep__day tnum">16</span><span class="dep__wd">Fri · Oct</span></div>
+        <div>
+          <h1 class="depage__title"><a href="#trek-mardi-himal">Mardi Himal</a></h1>
+          <div class="depage__sub tnum">Fri 16 Oct → Tue 20 Oct · 5 days</div>
+          <div class="depage__price tnum"><b>$175</b><small>per person · fixed for this group departure</small></div>
+          <div class="capdots"><span class="capdots__dot capdots__dot--taken"></span><span class="capdots__dot capdots__dot--taken"></span><span class="capdots__dot capdots__dot--taken"></span><span class="capdots__dot capdots__dot--taken"></span><span class="capdots__dot capdots__dot--taken"></span><span class="capdots__dot capdots__dot--taken"></span><span class="capdots__dot"></span><span class="capdots__dot"></span><span class="capdots__text tnum">2 of 8 spots left</span></div>
+          <p class="depage__note aside">Group meets in Pokhara the evening before the start.</p>
+        </div>
+      </div>
+      <div class="datestrip">
+        <div class="datestrip__row"><span class="datestrip__day">1</span><span class="datestrip__date tnum">Fri 16 Oct</span><span class="datestrip__route">Kande → Forest Camp<span class="datestrip__alt">sleep 2,600 m</span></span></div>
+        <div class="datestrip__row"><span class="datestrip__day">2</span><span class="datestrip__date tnum">Sat 17 Oct</span><span class="datestrip__route">Forest Camp → Badal Danda<span class="datestrip__alt">sleep 3,210 m</span></span></div>
+        <div class="datestrip__row"><span class="datestrip__day">3</span><span class="datestrip__date tnum">Sun 18 Oct</span><span class="datestrip__route">Badal Danda → High Camp<span class="datestrip__alt">sleep 3,550 m</span></span></div>
+      </div>
+      <div class="depage__actions"><a class="btn btn--primary btn--lg" href="#book-x">Request a spot</a><a class="btn btn--dark" href="#">Ask on WhatsApp</a></div>
+    </div>
+
+    <!-- CONFIRM CARD / TRIPS -->
+    <p class="pv">confirmation · my trips</p>
+    <div class="confirm-card"><div class="confirm-card__title">Requested.</div><div class="confirm-card__body">Sandip confirms on WhatsApp.</div><div class="confirm-card__ref tnum">Ref B1X2Y3</div><div class="confirm-card__actions"><a class="btn btn--dark" href="#">Send on WhatsApp too</a><a class="btn btn--ghost" href="#my-trips">See my trips</a></div></div>
+    <div class="trips">
+      <div class="trip"><div class="trip__head"><span>Mardi Himal</span><span class="pill pill--requested">Requested</span></div><div class="trip__meta tnum">Fri 16 Oct · 2 people · Ref B1X2Y3</div><div class="trip__actions"><button class="btn btn--danger btn--sm">Withdraw</button></div></div>
+      <div class="trip"><div class="trip__head"><span>Ghorepani Poon Hill</span><span class="pill pill--confirmed">Confirmed</span></div><div class="trip__meta tnum">Sat 10 Oct · 1 person · Ref B1A2B3</div><div class="trip__actions">To change a confirmed booking, message Sandip <button class="btn btn--dark btn--sm">Message Sandip</button></div></div>
+    </div>
+
+    <!-- QUOTES · FAQ · CONTACT -->
+    <section class="section">
+      <div class="section__head"><span class="section__eyebrow">What trekkers say</span><h2 class="section__title">From the trail</h2><a class="section__more" href="#about">All three</a></div>
+      <p class="quotes__lede">Reviews left on Tripadvisor by travellers Sandip guided during his years with Himalaya Hub Adventure, before he founded Magic Beyond Himalaya.</p>
+      <div class="quotes">
+        <blockquote class="quote"><p class="quote__text">Sandip was great as a guide. Unfortunately the weather wasn't always on our side but I think Sandip constantly adapted and made safe decisions so we could continue to enjoy the trip.</p><p class="quote__who tnum">Nat · Annapurna Circuit + ABC · Dec 2019 · Tripadvisor</p></blockquote>
+        <blockquote class="quote"><p class="quote__text">The trekking itself was wonderful. Sandip is a young, fun guide who does his work very well.</p><p class="quote__who tnum">Frank · Kano, Nigeria · Annapurna Base Camp · Sep 2019 · Tripadvisor</p></blockquote>
+      </div>
+    </section>
+    <div class="faq">
+      <details class="faq__item" open><summary class="faq__q">How fit do I need to be?</summary><div class="faq__a prose">We walk slowly and steadily, every day. If you can walk for five or six hours with breaks, you can do the shorter treks.</div></details>
+      <details class="faq__item"><summary class="faq__q">What about altitude sickness?</summary><div class="faq__a prose">I carry a first-aid kit and a pulse oximeter.</div></details>
+    </div>
+    <div class="contact" style="margin-top:24px">
+      <div class="copyfield"><span class="copyfield__text tnum">+977 9851353347</span><button class="btn btn--ghost btn--sm copyfield__btn">Copy</button></div>
+      <div class="copyfield"><span class="copyfield__text">magicbeyondhimalaya@gmail.com</span><button class="btn btn--ghost btn--sm copyfield__btn is-copied">Copied</button></div>
+    </div>
+
+    <!-- FORM -->
+    <p class="pv">form</p>
+    <form class="form book">
+      <div class="book__summary">Mardi Himal · Fri 16 Oct → Tue 20 Oct <span class="pill spots spots--few tnum">2 left</span><a class="book__change" href="#agenda">Change date</a></div>
+      <div class="field"><label class="field__label" for="f1">Name<span class="field__hint">as on your passport</span></label><input class="input" id="f1" placeholder="Your name"></div>
+      <div class="field is-invalid"><label class="field__label" for="f2">Email</label><input class="input" id="f2" value="not-an-email"><div class="field__error" role="alert">Enter a valid email address</div></div>
+      <div class="field"><label class="field__label" for="f3">WhatsApp number</label><div class="field__wrap"><span class="field__prefix">+</span><input class="input" id="f3" inputmode="tel" placeholder="977 98…"></div><div class="field__help">Country code first. Sandip replies here.</div></div>
+      <div class="field"><span class="field__label">Group size</span><div class="book__pax"><div class="stepper"><button class="stepper__btn" type="button" aria-label="Fewer">−</button><span class="stepper__val tnum">3</span><button class="stepper__btn" type="button" aria-label="More">+</button></div><span class="price-line tnum">$175 per person · <span class="price-line__total">$525 for 3</span></span></div><div class="book__warn">Only 2 spots left — you can still request, Sandip will reply</div></div>
+      <div class="field"><label class="field__label" for="f4">Notes</label><textarea class="input input--textarea" id="f4" placeholder="Anything Sandip should know"></textarea></div>
+      <div class="radios"><label class="radio"><input type="radio" name="s" checked>Open</label><label class="radio"><input type="radio" name="s">Closed</label></div>
+      <button class="btn btn--primary btn--block btn--lg book__submit" type="button">Request a spot</button>
+      <div class="book__cap-note">Checking if this can be saved to My trips…</div>
+    </form>
+  </div>
+
+  <!-- ADMIN -->
+  <p class="pv container">admin</p>
+  <div class="admin">
+    <div class="admin__band"><div class="container container--wide"><h1 class="admin__title">Sandip’s desk</h1><span class="pill syncpill syncpill--live">Live</span><a href="#home">Back to site</a></div></div>
+    <nav class="admin-tabs" style="position:static" aria-label="Admin">
+      <a class="admin-tabs__tab is-active" href="#admin">Inbox <span class="admin-tabs__badge tnum">3</span></a>
+      <a class="admin-tabs__tab" href="#admin-departures">Departures</a>
+      <a class="admin-tabs__tab" href="#admin-bookings">Bookings</a>
+      <a class="admin-tabs__tab" href="#admin-settings">Settings</a>
+    </nav>
+    <div class="admin__body container">
+      <section class="admin__section">
+        <div class="admin__section-title">Needs a reply</div>
+        <h3 class="admin__group">Mardi Himal · Fri 16 Oct</h3>
+        <div class="arow">
+          <div class="arow__main">
+            <div class="arow__title">Patrick · 2 people</div>
+            <div class="arow__meta tnum">Mardi Himal · Fri 16 Oct · requested 3 h ago</div>
+            <div class="arow__line tnum">6 of 8 booked · confirming leaves 0</div>
+            <div class="arow__bar"><div class="arow__bar-fill" style="width:75%"></div></div>
+            <div class="arow__contact"><div class="copyfield"><span class="copyfield__text tnum">+44 7700 900123</span><button class="btn btn--ghost btn--sm copyfield__btn">Copy</button></div><div class="copyfield"><span class="copyfield__text">patrick@example.com</span><button class="btn btn--ghost btn--sm copyfield__btn">Copy</button></div><a class="btn btn--dark btn--sm" href="#">Chat</a></div>
+            <div class="arow__note">Vegetarian, arriving a day early.</div>
+            <div class="arow__caption">claude.ai: Patrick O.</div>
+          </div>
+          <div class="arow__actions"><button class="btn btn--primary btn--sm">Confirm</button><button class="btn btn--danger btn--sm">Decline</button></div>
+        </div>
+        <div class="arow is-pending">
+          <div class="arow__main"><div class="arow__title">Maria · 3 people</div><div class="arow__meta tnum">Mardi Himal · Fri 16 Oct · requested 1 day ago</div><div class="arow__line arow__line--warn tnum">Would overbook by 1</div></div>
+          <div class="arow__actions"><button class="btn btn--primary btn--sm">Confirming…</button><button class="btn btn--danger btn--sm">Decline</button></div>
+        </div>
+        <div class="arow arow--drift">
+          <div class="arow__main"><div class="arow__title">Everest Base Camp + Gokyo · Thu 5 Nov</div><div class="arow__meta tnum">stored 4 · computed 3</div><div class="arow__error">Didn't send — tap to retry</div></div>
+          <div class="arow__actions"><button class="btn btn--ghost btn--sm">Recount</button></div>
+        </div>
+      </section>
+      <div class="dep-form__preview tnum">Ends Tue 20 Oct · id mardi-himal-20261016</div>
+      <div class="trekpick" style="margin-top:16px"><button class="trekpick__tile is-on">Mardi Himal<small>5 days</small></button><button class="trekpick__tile">Ghorepani Poon Hill<small>4 days</small></button><button class="trekpick__tile">Langtang Valley<small>7 days</small></button><button class="trekpick__tile">Manaslu Circuit<small>12 days</small></button></div>
+      <dl class="kv publish-check" style="margin-top:16px"><dt class="kv__k">Prices</dt><dd class="kv__v">Static in data.js. Edit in source and ask Claude to republish.</dd><dt class="kv__k">Photos</dt><dd class="kv__v">Static in images/.</dd></dl>
+      <div class="gate gate--denied"><div class="gate__card"><h1 class="gate__title">Sandip’s desk.</h1><p class="gate__body">This page checks who you are on claude.ai, not a password. Only the owner and editors of this artifact can open the desk.</p><div class="gate__who"><span class="gate__avatar">P</span>Signed in as Patrick · viewer</div><div class="gate__actions"><a class="btn btn--ghost" href="#home">Back to site</a></div></div></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div><div class="footer__wordmark">Magic Beyond Himalaya</div><p class="eyebrow" style="margin-top:8px">Sandip Sodari · Pokhara, Nepal</p></div>
+      <div class="contact"><div class="copyfield"><span class="copyfield__text tnum">+977 9851353347</span><button class="btn btn--ghost btn--sm copyfield__btn">Copy</button></div><a class="btn btn--dark" href="#">Ask on WhatsApp</a></div>
+      <p class="footer__proto">This site is a prototype published on claude.ai; the live site is magicbeyondhimalaya.com.</p>
+    </div>
+  </footer>
+</section>
+</main>
+
+<nav id="tabbar" class="tabbar" aria-label="Primary">
+  <a class="tabbar__tab" href="#home"><svg class="tabbar__icon" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span class="tabbar__label">Home</span></a>
+  <a class="tabbar__tab is-active" href="#agenda"><svg class="tabbar__icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span class="tabbar__label">Dates</span></a>
+  <a class="tabbar__tab" href="#treks"><svg class="tabbar__icon" viewBox="0 0 24 24"><path d="M3 19l6-10 4 6 3-4 5 8z"/></svg><span class="tabbar__label">Treks</span></a>
+  <a class="tabbar__tab" href="#my-trips"><svg class="tabbar__icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span class="tabbar__label">My trips</span></a>
+  <span class="tabbar__ink" style="transform:translateX(100%)"></span>
+</nav>
+<div id="ctabar" class="ctabar" hidden></div>
+<div id="sheet-root" class="sheet-root" hidden>
+  <button class="sheet__backdrop" aria-label="Close"></button>
+  <div class="sheet" role="dialog" aria-modal="true">
+    <div class="sheet__handle"></div>
+    <div class="sheet__head"><h2 class="sheet__title">Request a spot</h2><button class="iconbtn sheet__close" aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <div class="sheet__body">
+      <div class="book__summary">Mardi Himal · Fri 16 Oct → Tue 20 Oct <span class="pill spots spots--few tnum">2 left</span></div>
+      <div class="form" style="margin-top:16px">
+        <div class="field"><label class="field__label">Name</label><input class="input" value="Patrick"></div>
+        <div class="field"><label class="field__label">Email</label><input class="input" value="patrick@example.com"></div>
+        <div class="field"><label class="field__label">WhatsApp number</label><div class="field__wrap"><span class="field__prefix">+</span><input class="input" inputmode="tel" value="44 7700 900123"></div></div>
+        <div class="field"><span class="field__label">Group size</span><div class="book__pax"><div class="stepper"><button class="stepper__btn" type="button">−</button><span class="stepper__val tnum">2</span><button class="stepper__btn" type="button">+</button></div><span class="price-line tnum">$175 per person · <span class="price-line__total">$350 for 2</span></span></div></div>
+        <div class="field"><label class="field__label">Notes</label><textarea class="input input--textarea"></textarea></div>
+      </div>
+    </div>
+    <div class="sheet__foot"><button class="btn btn--primary btn--block btn--lg book__submit">Request a spot</button></div>
+  </div>
+</div>
+<div id="toast-root" class="toast-root" aria-live="polite"><div class="toast toast--ok is-in">Saved</div></div>
+
+<script>
+  (function(){var q=new URLSearchParams(location.search);
+    if(q.get('sheet')){var r=document.getElementById('sheet-root');r.hidden=false;r.classList.add('is-open');var s=r.querySelector('.sheet');
+      if(q.get('sheet')==='full'&&innerWidth<1024)s.classList.add('sheet--full');if(innerWidth>=1024)s.classList.add('sheet--panel');
+      requestAnimationFrame(function(){s.classList.add('is-in')});}
+  })();
+</script>
+</body>
+</html>

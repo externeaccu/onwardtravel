@@ -1,0 +1,215 @@
+[
+ {
+  "op": "set",
+  "collection": "departures",
+  "doc_id": "poon-hill-20261010",
+  "data": {
+   "id": "poon-hill-20261010",
+   "trekId": "poon-hill",
+   "start": "2026-10-10",
+   "days": 4,
+   "capacity": 8,
+   "manualPax": 3,
+   "spotsLeft": 5,
+   "price": 165,
+   "status": "open",
+   "note": "Example date for this preview. Sandip replaces it with real dates.",
+   "createdAt": 1790588260187,
+   "updatedAt": 1790588260187,
+   "ledger": []
+  }
+ },
+ {
+  "op": "set",
+  "collection": "departures",
+  "doc_id": "mardi-himal-20261016",
+  "data": {
+   "id": "mardi-himal-20261016",
+   "trekId": "mardi-himal",
+   "start": "2026-10-16",
+   "days": 5,
+   "capacity": 8,
+   "manualPax": 6,
+   "spotsLeft": 2,
+   "price": 175,
+   "status": "open",
+   "note": "Example date for this preview. Sandip replaces it with real dates.",
+   "createdAt": 1790588260187,
+   "updatedAt": 1790588260187,
+   "ledger": []
+  }
+ },
+ {
+  "op": "set",
+  "collection": "departures",
+  "doc_id": "abc-poon-20261024",
+  "data": {
+   "id": "abc-poon-20261024",
+   "trekId": "abc-poon",
+   "start": "2026-10-24",
+   "days": 8,
+   "capacity": 8,
+   "manualPax": 2,
+   "spotsLeft": 6,
+   "price": 185,
+   "status": "open",
+   "note": "Example date for this preview. Sandip replaces it with real dates.",
+   "createdAt": 1790588260187,
+   "updatedAt": 1790588260187,
+   "ledger": []
+  }
+ },
+ {
+  "op": "set",
+  "collection": "departures",
+  "doc_id": "annapurna-tilicho-20261101",
+  "data": {
+   "id": "annapurna-tilicho-20261101",
+   "trekId": "annapurna-tilicho",
+   "start": "2026-11-01",
+   "days": 11,
+   "capacity": 6,
+   "manualPax": 6,
+   "spotsLeft": 0,
+   "price": 250,
+   "status": "full",
+   "note": "Example date for this preview. Sandip replaces it with real dates.",
+   "createdAt": 1790588260187,
+   "updatedAt": 1790588260187,
+   "ledger": []
+  }
+ },
+ {
+  "op": "set",
+  "collection": "departures",
+  "doc_id": "ebc-gokyo-20261105",
+  "data": {
+   "id": "ebc-gokyo-20261105",
+   "trekId": "ebc-gokyo",
+   "start": "2026-11-05",
+   "days": 15,
+   "capacity": 6,
+   "manualPax": 2,
+   "spotsLeft": 4,
+   "price": 600,
+   "status": "open",
+   "note": "Example date for this preview. Sandip replaces it with real dates.",
+   "createdAt": 1790588260187,
+   "updatedAt": 1790588260187,
+   "ledger": []
+  }
+ },
+ {
+  "op": "set",
+  "collection": "departures",
+  "doc_id": "manaslu-circuit-20261114",
+  "data": {
+   "id": "manaslu-circuit-20261114",
+   "trekId": "manaslu-circuit",
+   "start": "2026-11-14",
+   "days": 12,
+   "capacity": 6,
+   "manualPax": 0,
+   "spotsLeft": 6,
+   "price": 420,
+   "status": "open",
+   "note": "Example date for this preview. Sandip replaces it with real dates.",
+   "createdAt": 1790588260187,
+   "updatedAt": 1790588260187,
+   "ledger": []
+  }
+ },
+ {
+  "op": "set",
+  "collection": "departures",
+  "doc_id": "langtang-20261128",
+  "data": {
+   "id": "langtang-20261128",
+   "trekId": "langtang",
+   "start": "2026-11-28",
+   "days": 7,
+   "capacity": 8,
+   "manualPax": 1,
+   "spotsLeft": 7,
+   "price": 175,
+   "status": "open",
+   "note": "Example date for this preview. Sandip replaces it with real dates.",
+   "createdAt": 1790588260187,
+   "updatedAt": 1790588260187,
+   "ledger": []
+  }
+ },
+ {
+  "op": "set",
+  "collection": "departures",
+  "doc_id": "manaslu-tsum-20270306",
+  "data": {
+   "id": "manaslu-tsum-20270306",
+   "trekId": "manaslu-tsum",
+   "start": "2027-03-06",
+   "days": 18,
+   "capacity": 6,
+   "manualPax": 0,
+   "spotsLeft": 6,
+   "price": 450,
+   "status": "open",
+   "note": "Example date for this preview. Sandip replaces it with real dates.",
+   "createdAt": 1790588260187,
+   "updatedAt": 1790588260187,
+   "ledger": []
+  }
+ },
+ {
+  "op": "set",
+  "collection": "departures",
+  "doc_id": "mardi-himal-20270320",
+  "data": {
+   "id": "mardi-himal-20270320",
+   "trekId": "mardi-himal",
+   "start": "2027-03-20",
+   "days": 5,
+   "capacity": 8,
+   "manualPax": 0,
+   "spotsLeft": 8,
+   "price": 175,
+   "status": "open",
+   "note": "Example date for this preview. Sandip replaces it with real dates.",
+   "createdAt": 1790588260187,
+   "updatedAt": 1790588260187,
+   "ledger": []
+  }
+ },
+ {
+  "op": "set",
+  "collection": "departures",
+  "doc_id": "poon-hill-20270403",
+  "data": {
+   "id": "poon-hill-20270403",
+   "trekId": "poon-hill",
+   "start": "2027-04-03",
+   "days": 4,
+   "capacity": 8,
+   "manualPax": 1,
+   "spotsLeft": 7,
+   "price": 165,
+   "status": "open",
+   "note": "Example date for this preview. Sandip replaces it with real dates.",
+   "createdAt": 1790588260187,
+   "updatedAt": 1790588260187,
+   "ledger": []
+  }
+ },
+ {
+  "op": "set",
+  "collection": "settings",
+  "doc_id": "site",
+  "data": {
+   "whatsapp": "9779851353347",
+   "email": "magicbeyondhimalaya@gmail.com",
+   "heroNote": "Preview build. The departure dates shown are examples until Sandip adds real ones.",
+   "heroNoteSetAt": 1790588260187,
+   "heroNoteUntil": null,
+   "updatedAt": 1790588260187
+  }
+ }
+]

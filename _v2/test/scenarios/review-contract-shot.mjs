@@ -1,0 +1,1 @@
+export default async (page, t) => { await t.sleep(1500); await t.shot('view'); return await page.evaluate(() => { const a = document.querySelector('.admin-tabs'); return a ? { parent: a.parentElement.id || a.parentElement.className, top: Math.round(a.getBoundingClientRect().top), pos: getComputedStyle(a).position } : null; }); };

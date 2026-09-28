@@ -38,3 +38,10 @@ works at a domain root or under a subpath with no changes.
 Published with GitHub Pages, serving from the repository root. `CNAME` holds
 the custom domain, so enabling Pages picks it up automatically. Any static
 host works equally well: drag the folder onto Netlify and it runs as-is.
+
+## Version 2
+
+`_v2/` holds the source of version 2: interactive route maps, a departures
+agenda, spot requests and an admin desk for Sandip. It runs as a claude.ai
+artifact with a live database, and GitHub Pages does not serve the folder.
+See `_v2/README.md`.

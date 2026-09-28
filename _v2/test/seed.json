@@ -1,0 +1,191 @@
+{
+ "departures/poon-hill-20261010": {
+  "trekId": "poon-hill",
+  "start": "2026-10-10",
+  "days": 4,
+  "capacity": 8,
+  "manualPax": 3,
+  "spotsLeft": 5,
+  "price": 165,
+  "status": "open",
+  "note": "",
+  "createdAt": 1790467200000,
+  "updatedAt": 1790467200000
+ },
+ "departures/mardi-himal-20261016": {
+  "trekId": "mardi-himal",
+  "start": "2026-10-16",
+  "days": 5,
+  "capacity": 8,
+  "manualPax": 6,
+  "spotsLeft": 2,
+  "price": 175,
+  "status": "open",
+  "note": "Group meets in Pokhara the evening before the start.",
+  "createdAt": 1790467200000,
+  "updatedAt": 1790467200000
+ },
+ "departures/abc-poon-20261024": {
+  "trekId": "abc-poon",
+  "start": "2026-10-24",
+  "days": 8,
+  "capacity": 8,
+  "manualPax": 2,
+  "spotsLeft": 6,
+  "price": 185,
+  "status": "open",
+  "note": "",
+  "createdAt": 1790467200000,
+  "updatedAt": 1790467200000
+ },
+ "departures/annapurna-tilicho-20261101": {
+  "trekId": "annapurna-tilicho",
+  "start": "2026-11-01",
+  "days": 11,
+  "capacity": 6,
+  "manualPax": 6,
+  "spotsLeft": 0,
+  "price": 250,
+  "status": "full",
+  "note": "",
+  "createdAt": 1790467200000,
+  "updatedAt": 1790467200000
+ },
+ "departures/ebc-gokyo-20261105": {
+  "trekId": "ebc-gokyo",
+  "start": "2026-11-05",
+  "days": 15,
+  "capacity": 6,
+  "manualPax": 2,
+  "spotsLeft": 4,
+  "price": 600,
+  "status": "open",
+  "note": "Group meets in Kathmandu the evening before the start.",
+  "createdAt": 1790467200000,
+  "updatedAt": 1790467200000
+ },
+ "departures/manaslu-circuit-20261114": {
+  "trekId": "manaslu-circuit",
+  "start": "2026-11-14",
+  "days": 12,
+  "capacity": 6,
+  "manualPax": 0,
+  "spotsLeft": 6,
+  "price": 420,
+  "status": "open",
+  "note": "",
+  "createdAt": 1790467200000,
+  "updatedAt": 1790467200000
+ },
+ "departures/langtang-20261128": {
+  "trekId": "langtang",
+  "start": "2026-11-28",
+  "days": 7,
+  "capacity": 8,
+  "manualPax": 1,
+  "spotsLeft": 7,
+  "price": 175,
+  "status": "open",
+  "note": "",
+  "createdAt": 1790467200000,
+  "updatedAt": 1790467200000
+ },
+ "departures/manaslu-tsum-20270306": {
+  "trekId": "manaslu-tsum",
+  "start": "2027-03-06",
+  "days": 18,
+  "capacity": 6,
+  "manualPax": 0,
+  "spotsLeft": 6,
+  "price": 450,
+  "status": "open",
+  "note": "",
+  "createdAt": 1790467200000,
+  "updatedAt": 1790467200000
+ },
+ "departures/mardi-himal-20270320": {
+  "trekId": "mardi-himal",
+  "start": "2027-03-20",
+  "days": 5,
+  "capacity": 8,
+  "manualPax": 0,
+  "spotsLeft": 8,
+  "price": 175,
+  "status": "open",
+  "note": "",
+  "createdAt": 1790467200000,
+  "updatedAt": 1790467200000
+ },
+ "departures/poon-hill-20270403": {
+  "trekId": "poon-hill",
+  "start": "2027-04-03",
+  "days": 4,
+  "capacity": 8,
+  "manualPax": 1,
+  "spotsLeft": 7,
+  "price": 165,
+  "status": "open",
+  "note": "",
+  "createdAt": 1790467200000,
+  "updatedAt": 1790467200000
+ },
+ "settings/site": {
+  "whatsapp": "9779851353347",
+  "email": "magicbeyondhimalaya@gmail.com",
+  "heroNote": "",
+  "heroNoteSetAt": null,
+  "heroNoteUntil": null,
+  "updatedAt": 1790467200000
+ },
+ "bookings/u_alice": {
+  "items": [
+   {
+    "id": "b1alice01",
+    "departureId": "mardi-himal-20261016",
+    "trekId": "mardi-himal",
+    "start": "2026-10-16",
+    "name": "Alice Verhoeven",
+    "email": "alice@example.com",
+    "whatsapp": "31612345678",
+    "pax": 2,
+    "note": "Vegetarian, both of us.",
+    "status": "requested",
+    "createdAt": 1790500000000,
+    "updatedAt": 1790500000000
+   },
+   {
+    "id": "b1alice02",
+    "departureId": "langtang-20261128",
+    "trekId": "langtang",
+    "start": "2026-11-28",
+    "name": "Alice Verhoeven",
+    "email": "alice@example.com",
+    "whatsapp": "31612345678",
+    "pax": 1,
+    "note": "",
+    "status": "confirmed",
+    "confirmedPax": 1,
+    "createdAt": 1790400000000,
+    "updatedAt": 1790450000000
+   }
+  ]
+ },
+ "bookings/u_bob": {
+  "items": [
+   {
+    "id": "b1bob0001",
+    "departureId": "mardi-himal-20261016",
+    "trekId": "mardi-himal",
+    "start": "2026-10-16",
+    "name": "Bob Tanaka",
+    "email": "bob@example.com",
+    "whatsapp": "819012345678",
+    "pax": 3,
+    "note": "",
+    "status": "requested",
+    "createdAt": 1790510000000,
+    "updatedAt": 1790510000000
+   }
+  ]
+ }
+}

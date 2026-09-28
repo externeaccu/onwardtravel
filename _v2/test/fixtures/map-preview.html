@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>maps.js fixture</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+/* ---- tokens: FINAL-SPEC §2 (verbatim) ---- */
+:root{
+  --cream:#faf6ef; --cream-2:#f3ece0; --green:#1f3d3a; --green-2:#14302d;
+  --amber:#c8842b; --amber-2:#efc079; --ink:#1a1714; --line-c:#d9cfbe;
+  --bg:#faf6ef; --surface:#f3ece0; --surface-2:#ece3d2; --surface-3:#e4d9c4;
+  --text:#1a1714; --text-2:#5b544c; --text-3:#8a8177; --text-inv:#faf6ef;
+  --rule:#d9cfbe; --rule-2:#e8dfcd;
+  --brand:#1f3d3a; --brand-2:#14302d; --on-brand:#faf6ef; --on-brand-2:#c9c1b3;
+  --accent:#c8842b; --accent-soft:rgba(200,132,43,.14); --on-accent:#1a1714;
+  --thread:#c8842b; --thread-halo:rgba(200,132,43,.18);
+  --ok:#2f6b4f; --ok-soft:rgba(47,107,79,.14);
+  --warn:#c8842b; --warn-soft:rgba(200,132,43,.14);
+  --danger:#a63d2f; --danger-soft:rgba(166,61,47,.12);
+  --neutral-soft:rgba(26,23,20,.07);
+  --focus:#c8842b;
+  --map-paper:#f3ece0; --map-grid:rgba(26,23,20,.07); --map-travel:#1f3d3a;
+  --skeleton:rgba(26,23,20,.07); --skeleton-hi:rgba(26,23,20,.12);
+  --backdrop:rgba(20,48,45,.55);
+  --font-display:"DM Serif Display",Georgia,"Times New Roman",serif;
+  --font-body:"DM Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --fs-xs:11px; --fs-sm:13px; --fs-base:16px; --fs-md:18px; --fs-lg:22px;
+  --fs-xl:28px; --fs-2xl:clamp(32px,6vw,44px); --fs-hero:clamp(40px,9vw,88px);
+  --fs-num:34px; --fs-num-lg:44px;
+  --lh-tight:1.1; --lh-body:1.5; --lh-loose:1.65; --track-caps:.14em;
+  --s-1:4px; --s-2:8px; --s-3:12px; --s-4:16px; --s-5:24px; --s-6:32px; --s-7:48px; --s-8:64px;
+  --gutter:16px; --content:680px; --content-wide:1120px;
+  --r-sm:6px; --r-md:10px; --r-lg:16px; --r-pill:999px;
+  --sh-1:0 1px 2px rgba(26,23,20,.06); --sh-2:0 6px 24px rgba(26,23,20,.12); --sh-sheet:0 -8px 40px rgba(26,23,20,.18);
+  --z-sticky:30; --z-bar:30; --z-sheet:40; --z-toast:50;
+  --topbar-h:52px; --tabbar-h:56px; --ctabar-h:64px;
+  --ease-out:cubic-bezier(.2,.8,.2,1); --dur-sheet:240ms; --dur-thread:900ms;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#14302d; --surface:#1f3d3a; --surface-2:#24463f; --surface-3:#2b5048;
+    --text:#f4efe6; --text-2:#c9c1b3; --text-3:#9a9388; --text-inv:#14302d;
+    --rule:rgba(250,246,239,.18); --rule-2:rgba(250,246,239,.10);
+    --brand:#0f2624; --brand-2:#0b1e1c; --on-brand:#faf6ef; --on-brand-2:#c9c1b3;
+    --accent:#efc079; --accent-soft:rgba(239,192,121,.16); --on-accent:#14302d;
+    --thread:#efc079; --thread-halo:rgba(239,192,121,.2);
+    --ok:#7fc39f; --ok-soft:rgba(127,195,159,.16);
+    --warn:#efc079; --warn-soft:rgba(239,192,121,.16);
+    --danger:#e08a7b; --danger-soft:rgba(224,138,123,.16);
+    --neutral-soft:rgba(250,246,239,.08);
+    --focus:#efc079;
+    --map-paper:#1f3d3a; --map-grid:rgba(250,246,239,.07); --map-travel:#c9c1b3;
+    --skeleton:rgba(250,246,239,.08); --skeleton-hi:rgba(250,246,239,.14);
+    --backdrop:rgba(0,0,0,.6);
+    --sh-1:0 1px 2px rgba(0,0,0,.3); --sh-2:0 6px 24px rgba(0,0,0,.4); --sh-sheet:0 -8px 40px rgba(0,0,0,.5);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#14302d; --surface:#1f3d3a; --surface-2:#24463f; --surface-3:#2b5048;
+  --text:#f4efe6; --text-2:#c9c1b3; --text-3:#9a9388; --text-inv:#14302d;
+  --rule:rgba(250,246,239,.18); --rule-2:rgba(250,246,239,.10);
+  --brand:#0f2624; --brand-2:#0b1e1c; --on-brand:#faf6ef; --on-brand-2:#c9c1b3;
+  --accent:#efc079; --accent-soft:rgba(239,192,121,.16); --on-accent:#14302d;
+  --thread:#efc079; --thread-halo:rgba(239,192,121,.2);
+  --ok:#7fc39f; --ok-soft:rgba(127,195,159,.16);
+  --warn:#efc079; --warn-soft:rgba(239,192,121,.16);
+  --danger:#e08a7b; --danger-soft:rgba(224,138,123,.16);
+  --neutral-soft:rgba(250,246,239,.08);
+  --focus:#efc079;
+  --map-paper:#1f3d3a; --map-grid:rgba(250,246,239,.07); --map-travel:#c9c1b3;
+  --skeleton:rgba(250,246,239,.08); --skeleton-hi:rgba(250,246,239,.14);
+  --backdrop:rgba(0,0,0,.6);
+  --sh-1:0 1px 2px rgba(0,0,0,.3); --sh-2:0 6px 24px rgba(0,0,0,.4); --sh-sheet:0 -8px 40px rgba(0,0,0,.5);
+}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:var(--fs-base);line-height:var(--lh-body);margin:0}
+@media (prefers-reduced-motion: reduce){ *,*::before,*::after{animation:none!important;transition:none!important} }
+.tnum{font-variant-numeric:tabular-nums}
+.container{max-width:var(--content);padding:0 var(--gutter);margin:0 auto}
+h2{font-family:var(--font-display);font-weight:400;letter-spacing:-.015em;line-height:var(--lh-tight);font-size:var(--fs-xl);margin:var(--s-6) 0 var(--s-3)}
+.eyebrow{font-size:var(--fs-xs);letter-spacing:var(--track-caps);text-transform:uppercase;color:var(--text-2)}
+.thread__line{stroke:var(--thread);stroke-width:2.5;fill:none;stroke-linecap:round}
+.fx-bar{display:flex;gap:8px;align-items:center;padding:12px 0}
+.fx-bar button{font:inherit;padding:6px 10px;border:1px solid var(--rule);background:var(--surface);color:var(--text);border-radius:var(--r-md)}
+.fx-grid{display:grid;grid-template-columns:1fr;gap:var(--s-5)}
+@media (min-width:1024px){.fx-grid{grid-template-columns:1fr 1fr}.container--wide{max-width:var(--content-wide)}}
+.fx-days{display:flex;gap:6px;flex-wrap:wrap;margin-top:var(--s-3)}
+.fx-days button{font:inherit;width:36px;height:36px;border-radius:999px;border:2px solid var(--brand);background:var(--surface);color:var(--text)}
+.fx-days button.is-active{border-color:var(--accent)}
+
+/* ---- RouteMap (§3 / §5) — proposed styles.css block ---- */
+.rmap{position:relative}
+.rmap__stage{position:relative}
+.rmap__svg{display:block;width:100%;height:auto;border:1px solid var(--rule);border-radius:var(--r-md);background:var(--map-paper)}
+.rmap__legend{font-size:11px;color:var(--text-3);margin:6px 0 0}
+.rmap__marker{cursor:pointer;opacity:0;transform:scale(.6);transition:opacity 260ms var(--ease-out),transform 260ms var(--ease-out);transition-delay:calc(var(--i) * 70ms);outline:none}
+.rmap.is-visible .rmap__marker{opacity:1;transform:none;transition-delay:calc(var(--i) * 70ms)}
+.rmap.is-visible .rmap__marker.is-dim{opacity:.5}
+.rmap.is-visible .rmap__marker.is-active{transform:scale(1.15)}
+.rmap__marker.is-hover .rmap__dot,.rmap__marker:focus-visible .rmap__dot{stroke:var(--accent)}
+.rmap__marker:focus-visible .rmap__dot{stroke-width:3}
+.rmap__line--walk,.rmap__halo{transition:stroke-dashoffset var(--dur-thread) var(--ease-out)}
+.rmap.is-visible .rmap__line--walk,.rmap.is-visible .rmap__halo{stroke-dashoffset:0}
+.rmap--static .rmap__marker{cursor:default;pointer-events:none}
+.rmap__daycard{background:var(--surface-2);border-radius:var(--r-md);padding:var(--s-3);margin-top:var(--s-3)}
+.rmap__daycard p{margin:0}
+.rmap__daycard-title{font-weight:500}
+.rmap__daycard-facts{font-size:13px;color:var(--text-2)}
+/* ---- ElevationProfile ---- */
+.elev{position:relative;margin-top:var(--s-3)}
+.elev__svg{display:block;width:100%;height:120px}
+.elev--hero{margin:0}
+.elev--hero .elev__svg{height:160px}
+.elev--hero .elev__line{transition:stroke-dashoffset var(--dur-thread) var(--ease-out)}
+.elev--hero.is-drawn .elev__line{stroke-dashoffset:0}
+.elev__hit{cursor:pointer}
+/* ---- ProfileHero shell (only what the fixture needs) ---- */
+.phero{position:relative;background:var(--surface);border-bottom:1px solid var(--rule);min-height:200px;overflow:hidden}
+.phero__svg{position:absolute;left:0;right:0;bottom:0;height:160px}
+.phero__title{position:relative;font-family:var(--font-display);font-weight:400;font-size:var(--fs-2xl);margin:0;padding:var(--s-5) var(--gutter) 0}
+/* ---- Sparkline ---- */
+.trek-card__spark{display:block;width:100px;height:28px}
+.fx-spark-row{display:flex;gap:var(--s-4);align-items:center;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="fx-bar">
+    <strong>maps.js fixture</strong>
+    <button type="button" id="fx-theme">Toggle dark</button>
+    <span id="fx-status" class="tnum" style="font-size:13px;color:var(--text-2)"></span>
+  </div>
+
+  <h2>1 · Poon Hill (worked example) — RouteMap + docked profile + fake DayList</h2>
+  <div id="map-poon"></div>
+  <div class="fx-days" id="days-poon"></div>
+
+  <h2>2 · Synthetic 8-day trek — pass, rest day, merged stop, repeated place, drive leg</h2>
+  <div class="phero" id="hero-long"><h1 class="phero__title">Synthetic Circuit</h1><div class="phero__svg" id="hero-long-svg"></div></div>
+  <div id="map-long" style="margin-top:16px"></div>
+  <div class="fx-days" id="days-long"></div>
+
+  <h2>3 · Static, dated (departure page)</h2>
+  <div id="map-static"></div>
+
+  <h2>4 · Sparklines</h2>
+  <div class="fx-spark-row" id="sparks"></div>
+</div>
+
+<div class="container container--wide">
+  <h2>5 · Real treks from data.js (if it loads)</h2>
+  <div class="fx-grid" id="real"></div>
+</div>
+
+<script src="../../data.js" onerror="window.__noData = true"></script>
+<script src="../../maps.js"></script>
+<script>
+(function () {
+  var MBH = window.MBH;
+  var status = document.getElementById('fx-status');
+
+  // Worked example from FINAL-SPEC §4 plus the V1 itinerary facts for Poon Hill.
+  var POON = {
+    id: 'poon-hill', name: 'Ghorepani Poon Hill', days: 4, maxElev: 3210,
+    days_data: [
+      { day: 1, route: 'Pokhara → Nayapul → Ulleri', alt: 2050, time: '5–6 hrs' },
+      { day: 2, route: 'Ulleri → Ghorepani', alt: 2860, time: '5–6 hrs' },
+      { day: 3, route: 'Poon Hill (3,210m) → Tadapani', alt: 2630, time: '6–7 hrs' },
+      { day: 4, route: 'Tadapani → Ghandruk → Pokhara', alt: 1940, time: '4–5 hrs' }
+    ],
+    sparkline: [2050, 2860, 2630, 1940],
+    route: [
+      { day: 1, name: 'Nayapul',   lat: 28.311, lng: 83.726, elev: 1070, kind: 'start' },
+      { day: 1, name: 'Ulleri',    lat: 28.362, lng: 83.714, elev: 2050, kind: 'stop' },
+      { day: 2, name: 'Ghorepani', lat: 28.400, lng: 83.700, elev: 2860, kind: 'stop' },
+      { day: 3, name: 'Poon Hill', lat: 28.401, lng: 83.690, elev: 3210, kind: 'peak' },
+      { day: 3, name: 'Tadapani',  lat: 28.400, lng: 83.746, elev: 2630, kind: 'stop' },
+      { day: 4, name: 'Ghandruk',  lat: 28.376, lng: 83.809, elev: 1940, kind: 'end' }
+    ]
+  };
+
+  // Synthetic: a pass, a rest day with no waypoint (day 4), an explicit duplicated
+  // stop (High Kharka days 5–6), a non-consecutive repeat (Alpine Village day 7)
+  // and a drive leg to the roadhead.
+  var LONG = {
+    id: 'fixture-long', name: 'Synthetic Circuit', days: 8, maxElev: 5200,
+    days_data: [
+      { day: 1, route: 'Trailhead → Riverside', alt: 1900, time: '4–5 hrs' },
+      { day: 2, route: 'Riverside → Forest Lodge', alt: 2600, time: '5–6 hrs' },
+      { day: 3, route: 'Forest Lodge → Alpine Village', alt: 3400, time: '6 hrs' },
+      { day: 4, route: 'Acclimatisation day in Alpine Village', alt: 3400, time: '' },
+      { day: 5, route: 'Alpine Village → High Kharka', alt: 4050, time: '5–6 hrs' },
+      { day: 6, route: 'Sacred Lake (4,900m) → High Kharka', alt: 4050, time: '6–7 hrs' },
+      { day: 7, route: 'Great Pass (5,200m) → Alpine Village', alt: 3400, time: '8–9 hrs' },
+      { day: 8, route: 'Alpine Village → Roadhead by jeep', alt: 1200, time: '' }
+    ],
+    route: [
+      { day: 1, name: 'Trailhead',      lat: 28.470, lng: 83.980, elev: 1500, kind: 'start' },
+      { day: 1, name: 'Riverside',      lat: 28.500, lng: 84.000, elev: 1900, kind: 'stop' },
+      { day: 2, name: 'Forest Lodge',   lat: 28.540, lng: 84.030, elev: 2600, kind: 'stop' },
+      { day: 3, name: 'Alpine Village', lat: 28.580, lng: 84.070, elev: 3400, kind: 'stop' },
+      { day: 5, name: 'High Kharka',    lat: 28.620, lng: 84.110, elev: 4050, kind: 'stop' },
+      { day: 6, name: 'Sacred Lake',    lat: 28.650, lng: 84.130, elev: 4900, kind: 'peak' },
+      { day: 6, name: 'High Kharka',    lat: 28.620, lng: 84.110, elev: 4050, kind: 'stop' },
+      { day: 7, name: 'Great Pass',     lat: 28.640, lng: 84.160, elev: 5200, kind: 'pass' },
+      { day: 7, name: 'Alpine Village', lat: 28.580, lng: 84.070, elev: 3400, kind: 'stop' },
+      { day: 8, name: 'Roadhead',       lat: 28.520, lng: 84.120, elev: 1200, kind: 'end', mode: 'drive' }
+    ]
+  };
+  LONG.sparkline = LONG.days_data.map(function (d) { return d.alt; });
+
+  var fx = window.__fx = { maps: {}, profiles: {}, selections: [] };
+
+  function dayButtons(holder, trek, map) {
+    holder.innerHTML = '';
+    for (var d = 1; d <= trek.days; d++) {
+      var b = document.createElement('button');
+      b.type = 'button'; b.textContent = d; b.dataset.d = d;
+      b.addEventListener('click', function (e) {
+        var n = +e.currentTarget.dataset.d;
+        map.highlightDay(n);
+        mark(holder, n);
+      });
+      holder.appendChild(b);
+    }
+  }
+  function mark(holder, n) {
+    Array.prototype.forEach.call(holder.children, function (b) { b.classList.toggle('is-active', +b.dataset.d === n); });
+  }
+
+  var poonHolder = document.getElementById('days-poon');
+  fx.maps.poon = MBH.RouteMap(document.getElementById('map-poon'), POON, {
+    onDaySelect: function (d, src) { fx.selections.push({ trek: 'poon', d: d, src: src }); mark(poonHolder, d); }
+  });
+  dayButtons(poonHolder, POON, fx.maps.poon);
+
+  fx.profiles.hero = MBH.ElevationProfile(document.getElementById('hero-long-svg'), LONG, { hero: true });
+  var longHolder = document.getElementById('days-long');
+  fx.maps.long = MBH.RouteMap(document.getElementById('map-long'), LONG, {
+    onDaySelect: function (d, src) { fx.selections.push({ trek: 'long', d: d, src: src }); mark(longHolder, d); }
+  });
+  dayButtons(longHolder, LONG, fx.maps.long);
+
+  fx.maps.static = MBH.RouteMap(document.getElementById('map-static'), LONG, { static: true, profile: false, dates: { start: '2026-10-16' } });
+
+  var sparks = document.getElementById('sparks');
+  [POON, LONG].concat(MBH.TREKS || []).forEach(function (t) {
+    var w = document.createElement('div');
+    w.innerHTML = MBH.Sparkline(t) + '<div style="font-size:11px;color:var(--text-2)">' + t.name.replace(/[&<>"']/g, '') + '</div>';
+    sparks.appendChild(w);
+  });
+
+  if (Array.isArray(MBH.TREKS) && MBH.TREKS.length) {
+    var real = document.getElementById('real');
+    fx.real = {};
+    MBH.TREKS.forEach(function (t) {
+      var cell = document.createElement('div');
+      var h = document.createElement('div'); h.className = 'eyebrow'; h.textContent = t.name + ' · ' + t.days + ' days'; cell.appendChild(h);
+      var m = document.createElement('div'); cell.appendChild(m);
+      real.appendChild(cell);
+      fx.real[t.id] = MBH.RouteMap(m, t, { onDaySelect: function () {} });
+    });
+  } else {
+    document.getElementById('real').textContent = 'data.js not loaded — skipped.';
+  }
+
+  document.getElementById('fx-theme').addEventListener('click', function () {
+    var r = document.documentElement;
+    r.setAttribute('data-theme', r.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+  });
+  status.textContent = 'maps: ' + Object.keys(fx.maps).length + ' · real: ' + (fx.real ? Object.keys(fx.real).length : 0);
+})();
+</script>
+</body>
+</html>

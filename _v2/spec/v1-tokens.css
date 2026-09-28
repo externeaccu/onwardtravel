@@ -1,0 +1,34 @@
+:root {
+  --green-900: #14302d;
+  --green-800: #1f3d3a;
+  --green-700: #2c524d;
+  --green-600: #3e6e68;
+  --amber-600: #b56f1a;
+  --amber-500: #c8842b;
+  --amber-400: #dba24a;
+  --amber-300: #efc079;
+  --cream-50:  #faf6ef;
+  --cream-100: #f3ece0;
+  --cream-200: #e8ddc8;
+  --ink-900:   #1a1714;
+  --ink-800:   #241f1c;
+  --ink-600:   #4d4742;
+  --ink-500:   #6b635c;
+  --ink-400:   #8a8278;
+  --line:      #d9cfbe;
+  --white:     #fffdf9;
+
+  --shadow-sm: 0 1px 2px rgba(20,48,45,0.06), 0 1px 3px rgba(20,48,45,0.05);
+  --shadow-md: 0 4px 12px rgba(20,48,45,0.08), 0 2px 4px rgba(20,48,45,0.06);
+  --shadow-lg: 0 18px 40px -12px rgba(20,48,45,0.22), 0 8px 16px -8px rgba(20,48,45,0.12);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 18px;
+
+  --container: 1180px;
+  --gutter: 22px;
+
+  --font-display: 'DM Serif Display', 'Georgia', serif;
+  --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
